@@ -1,4 +1,5 @@
 import './assets/global-styles/global-styles.scss';
+import './assets/global-styles/utilities.scss';
 import { Routes, Route } from "react-router-dom";
 
 import Home from './components/home/Home';
