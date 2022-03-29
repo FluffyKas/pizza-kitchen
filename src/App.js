@@ -1,23 +1,25 @@
-import logo from './logo.svg';
-import './App.css';
+import RatingCard from './components/rating-card/RatingCard';
+import Home from './components/home/Home';
+import './assets/global-styles/global-styles.scss';
+import { Routes, Route } from "react-router-dom";
+import Base from './components/base/Base';
+import Toppings from './components/toppings/Toppings';
+import Finish from './components/finish/Finish';
+import ThankYouCard from './components/thank-you-card/ThankYouCard';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <main>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/base" element={<Base />} />
+          <Route path="/toppings" element={<Toppings />} />
+          <Route path="/finish" element={<Finish />} />
+          <Route path="/rating" element={<RatingCard />} />
+          <Route path="/thankyou" element={<ThankYouCard />} />
+        </Routes>
+      </main>
     </div>
   );
 }

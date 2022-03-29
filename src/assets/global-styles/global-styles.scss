@@ -1,0 +1,9 @@
+@use './variables.scss' as *;
+
+main {
+  background: $clr-neutral-blue-900;
+  font-family: $ff-main;
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+}

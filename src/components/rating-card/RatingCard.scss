@@ -1,0 +1,103 @@
+@use '../../assets/global-styles/variables.scss' as *;
+
+.rating-card {
+  background: $clr-neutral-blue-800;
+  border-radius: 10px;
+  max-width: 24rem;
+  margin-inline: 1.5rem;
+  padding: clamp(1.5rem,2vw,2rem);
+}
+
+.sr-only {
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+
+.rating-card__img {
+  background: $clr-neutral-grey-300;
+  border-radius: 50%;
+  padding: .75rem;
+}
+
+// RATING CARD TEXTS
+
+.rating-card__title {
+  color: $clr-neutral-white;
+  font-size: 1.5rem;
+}
+
+.rating-card__description {
+  color: $clr-neutral-grey-200;
+  padding-block: 1rem;
+}
+
+// RATING CARD FORM
+
+fieldset {
+  border: none;
+}
+
+.input-container {
+  display: flex;
+  gap: 3rem;
+  justify-content: space-evenly;
+}
+
+.rating-card__form label {
+  color: $clr-neutral-grey-200;
+  cursor: pointer;
+  font-weight: 600;
+  position: relative;
+  z-index: 1;
+}
+
+.rating-card__form label:hover {
+  color: white;
+}
+
+.rating-card__form label::after {
+  content: '';
+  position: absolute;
+  background: $clr-neutral-grey-300;
+  border-radius: 50%;
+  width: 2.5rem;
+  height: 2.5rem;
+  left: 50%;
+  top: 50%;
+  z-index: -1;
+  transform: translate(-50%, -50%);
+  opacity: .2;
+}
+
+.rating-card__form input {
+  opacity: 0;
+  position: absolute;
+}
+
+.submit-btn {
+  background: $clr-primary-orange;
+  border: none;
+  border-radius: 35px;
+  color: $clr-neutral-white;
+  cursor: pointer;
+  display: block;
+  font-weight: 600;
+  letter-spacing: 1px;
+  margin-block: 2rem .5rem;
+  padding-block: .75rem;
+  text-transform: uppercase;
+  width: 100%;
+  transform: scale(1);
+  transition: all .25s ease-in;
+}
+
+.submit-btn:hover {
+  background: $clr-neutral-white;
+  color: $clr-primary-orange;
+  transform: scale(1.05);
+}
