@@ -1,34 +1,10 @@
 @use '../../assets/global-styles/variables.scss' as *;
 
 .home {
-  min-height: 100vh;
-  color: white;
-  display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
 }
 
-.home-link {
-  background: $clr-primary-orange;
-  border: none;
-  border-radius: 35px;
-  color: $clr-neutral-white;
-  cursor: pointer;
-  display: block;
-  font-weight: 600;
-  letter-spacing: 1px;
-  margin-block: 2rem .5rem;
-  padding-block: .75rem;
-  text-transform: uppercase;
-  width: 100%;
-  text-align: center;
-  transform: scale(1);
-  transition: all .25s ease-in;
-}
-
-.home-link:hover {
-  background: $clr-neutral-white;
-  color: $clr-primary-orange;
-  transform: scale(1.05);
+.home__title {
+  font-size: clamp(1.35rem, 8vw, 2.75rem);
+  padding-bottom: 1rem;
 }
