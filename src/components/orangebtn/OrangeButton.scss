@@ -1,0 +1,24 @@
+@use '../../assets/global-styles/variables.scss' as *;
+
+.orange-button {
+  background: $clr-primary-orange;
+  border: none;
+  border-radius: 35px;
+  color: $clr-neutral-white;
+  cursor: pointer;
+  display: block;
+  font-weight: 600;
+  letter-spacing: 1px;
+  margin-block: 2rem .5rem;
+  padding: .75rem 7rem;
+  text-transform: uppercase;
+  text-align: center;
+  transform: scale(1);
+  transition: all .25s ease-in;
+}
+
+.orange-button:hover {
+  background: $clr-neutral-white;
+  color: $clr-primary-orange;
+  transform: scale(1.05);
+}
