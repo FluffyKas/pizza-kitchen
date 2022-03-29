@@ -1,11 +1,13 @@
 import { Link } from "react-router-dom";
+import './Base.scss';
+import OrangeButton from '../orangebtn/OrangeButton';
 
 const Base = () => {
 
   const bases = ['classic', 'thin', 'stuffed', 'chicago-style']
 
   return (
-    <div>
+    <div className="base container">
       <h1 className="base-title">Choose your base: </h1>
       <form>
         <fieldset>
@@ -17,7 +19,7 @@ const Base = () => {
               </div>
             )
           })}
-          <Link to="/toppings">Next: Toppings</Link>
+          <OrangeButton nextPage={"/toppings"} text={"Next: Toppings"} />
         </fieldset>
       </form>
     </div>
