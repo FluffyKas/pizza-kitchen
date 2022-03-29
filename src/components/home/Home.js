@@ -1,14 +1,16 @@
-// import pizza from '../../assets/images/pizza.jpg';
 import './Home.scss';
 import { Link } from "react-router-dom";
+import OrangeButton from '../orangebtn/OrangeButton';
 
 const Home = () => {
+
   return (
-    <div className="home">
-      <h1>Welcome to Pizza Place</h1>
-      <Link to="/base" className="home-link">Create your pizza</Link>
+    <div className="home container flex flex-center text-center">
+      <h1 className="home__title">Welcome to Pizza Kitchen</h1>
+      <OrangeButton nextPage={"/toppings"} text={"Create your pizza"} />
     </div>
   );
 }
 
 export default Home;
+
