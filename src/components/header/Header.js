@@ -1,4 +1,4 @@
-import pizza from '../../assets/images/pizza2.svg';
+import logo from '../../assets/images/logo.svg';
 import hamburger from '../../assets/images/icon-hamburger.svg';
 import closeBtn from '../../assets/images/icon-close.svg';
 import './Header.scss';
@@ -31,8 +31,8 @@ const Header = () => {
     <header>
       <div className="header-inner-wrapper">
 
-        <Link to="/" className="logo-container">
-          <img src={pizza} alt="" aria-hidden="true" className="logo-img" />
+        <Link to="/" className="logo-container" aria-label="Pizza Kitchen">
+          <img src={logo} alt="" aria-hidden="true" className="logo-img" />
           <span>Pizza Kitchen</span>
         </Link>
 
