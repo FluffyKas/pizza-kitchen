@@ -1,11 +1,12 @@
 import { Link } from "react-router-dom";
+import OrangeButton from '../orangebtn/OrangeButton';
 
 const Toppings = () => {
 
   const toppings = ['extra cheese', 'pepperoni', 'parma ham', 'mushrooms', 'black olives', 'bacon', 'sweetcorn', 'anchovies', 'pineapple', 'onions', 'bell pepper', 'fresh basil', 'baby spinach', 'rocket']
 
   return (
-    <div>
+    <div className="toppings container">
       <h1>Choose your Toppings:</h1>
       <form>
         <fieldset>
@@ -17,7 +18,7 @@ const Toppings = () => {
               </div>
             )
           })}
-          <Link to="/finish">Finish your order</Link>
+          <OrangeButton nextPage={"/finish"} text={"Finish ypur order"} />
         </fieldset>
       </form>
     </div>
