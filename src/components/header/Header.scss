@@ -1,0 +1,71 @@
+@use '../../assets/global-styles/variables.scss' as *;
+
+header {
+  position: fixed;
+  width: 100%;}
+
+.header-inner-wrapper {
+  margin: 0 auto;
+  max-width: 100rem;
+  padding: 1.5rem 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+  color: white;
+  gap: 1rem;
+  letter-spacing: 1px;
+
+  span {
+    padding-top: .75rem;
+  }
+}
+
+.logo-img {
+  width: 50px; 
+  filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(93deg) brightness(103%) contrast(103%);
+}
+
+.nav-menu {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  background: gray;
+  position: fixed;
+  inset: 0 0 60% 0;
+  @media(min-width: 40rem) {
+    background: none;
+    flex-direction: row;
+    position: static;
+  }
+}
+
+.nav-menu-link {
+  color: white;
+  cursor: pointer;
+  letter-spacing: 1px;
+  transition: all .2s ease;
+}
+
+.nav-menu-link:hover {
+  color: $clr-primary-orange;
+}
+
+.hamburger-btn {
+  background: transparent;
+  border: 0;
+  cursor: pointer;
+  position: absolute;
+  z-index: 9999;
+  top: 2rem;
+  right: 2rem;
+  @media(min-width: 40rem) {
+    display: none;
+  }
+}
