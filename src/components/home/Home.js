@@ -1,5 +1,4 @@
 import './Home.scss';
-import { Link } from "react-router-dom";
 import OrangeButton from '../orangebtn/OrangeButton';
 
 const Home = () => {
