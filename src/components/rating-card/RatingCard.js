@@ -1,14 +1,14 @@
 import './RatingCard.scss';
 import star from '../../assets/images/icon-star.svg';
-import { useState } from 'react';
+// import { useState } from 'react';
 import { Link } from "react-router-dom";
 
 const RatingCard = () => {
 
-  const [activeRating, setActiveRating] = useState(null);
+  // const [activeRating, setActiveRating] = useState(null);
 
   const selectRating = (e) => {
-    setActiveRating(e.target.value)
+    console.log(e.target.value)
   }
 
   return (
