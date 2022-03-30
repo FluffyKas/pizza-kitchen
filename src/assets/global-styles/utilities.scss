@@ -15,3 +15,51 @@
 .text-center {
   text-align: center;
 }
+
+.uppercase {
+  text-transform: uppercase;
+}
+
+.sr-only {
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+
+//Paddings
+
+.pt-050 {
+  padding-top: .5rem;
+}
+
+.pt-100 {
+  padding-top: 1rem;
+}
+
+.pt-150 {
+  padding-top: 1.5rem;
+}
+
+.pt-200 {
+  padding-top: 2rem;
+}
+
+.pb-050 {
+  padding-bottom: .5rem;
+}
+
+.pb-100 {
+  padding-bottom: 1rem;
+}
+
+.pb-150 {
+  padding-bottom: 1.5rem;
+}
+
+.pb-200 {
+  padding-bottom: 2rem;
+}
