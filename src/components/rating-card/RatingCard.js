@@ -12,7 +12,7 @@ const RatingCard = () => {
   }
 
   return (
-    <div className="rating-card">
+    <div className="rating-card container">
 
       <img src={star} alt="" aria-hidden="true" className="rating-card__img" />
 

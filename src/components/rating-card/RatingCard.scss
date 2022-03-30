@@ -4,18 +4,7 @@
   background: $clr-neutral-blue-800;
   border-radius: 10px;
   max-width: 24rem;
-  margin-inline: 1.5rem;
   padding: clamp(1.5rem,2vw,2rem);
-}
-
-.sr-only {
-  clip: rect(0 0 0 0);
-  clip-path: inset(50%);
-  height: 1px;
-  overflow: hidden;
-  position: absolute;
-  white-space: nowrap;
-  width: 1px;
 }
 
 .rating-card__img {
