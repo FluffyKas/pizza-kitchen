@@ -1,20 +1,28 @@
-import { Link } from "react-router-dom";
 import './Base.scss';
 import OrangeButton from '../orangebtn/OrangeButton';
 
-const Base = () => {
+const Base = ({ setNewPizza, newPizza }) => {
 
   const bases = ['classic', 'thin', 'stuffed', 'chicago-style']
+
+  const addBase = (e) => {
+    setNewPizza(
+      {
+        ...newPizza,
+        base: e.target.value
+      }
+    )
+  }
 
   return (
     <div className="base container">
       <h1 className="base-title">Choose your base: </h1>
       <form>
         <fieldset>
-          {bases.map((base) => {
+          {bases.map((base, index) => {
             return (
-              <div>
-                <input type="checkbox" id={base} value={base} name={base} />
+              <div key={index}>
+                <input type="radio" id={base} value={base} name="pizza-base" onChange={addBase} />
                 <label htmlFor={base}>{base}</label>
               </div>
             )
