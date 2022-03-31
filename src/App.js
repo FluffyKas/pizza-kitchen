@@ -21,10 +21,10 @@ function App() {
       <Header />
       <main>
         <Routes>
-          <Route path="/" element={<Home />} />
+          <Route path="/" element={<Home newPizza={newPizza} setNewPizza={setNewPizza} />} />
           <Route path="/base" element={<Base newPizza={newPizza} setNewPizza={setNewPizza} />} />
           <Route path="/toppings" element={<Toppings newPizza={newPizza} setNewPizza={setNewPizza} />} />
-          <Route path="/finish" element={<Finish />} />
+          <Route path="/finish" element={<Finish newPizza={newPizza} />} />
           <Route path="/rating" element={<RatingCard />} />
           <Route path="/thankyou" element={<ThankYouCard />} />
           <Route path="/contact" element={<ContactPage />} />
