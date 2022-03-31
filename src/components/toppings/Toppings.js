@@ -1,11 +1,17 @@
 import OrangeButton from '../orangebtn/OrangeButton';
 
-const Toppings = () => {
+const Toppings = ({ newPizza, setNewPizza }) => {
 
   const toppings = ['extra cheese', 'pepperoni', 'parma ham', 'mushrooms', 'black olives', 'bacon', 'sweetcorn', 'anchovies', 'pineapple', 'onions', 'bell pepper', 'fresh basil', 'baby spinach', 'rocket']
 
   const addToppings = (e) => {
-    console.log(e.target.value)
+    let chosenToppings;
+    if (!newPizza.toppings.includes(e.target.value)) {
+      chosenToppings = [...newPizza.toppings, e.target.value]
+    } else {
+      chosenToppings = newPizza.toppings.filter(topping => topping !== e.target.value);
+    }
+    setNewPizza({ ...newPizza, toppings: chosenToppings })
   }
 
   return (
