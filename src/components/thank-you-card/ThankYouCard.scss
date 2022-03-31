@@ -1,0 +1,27 @@
+@use '../../assets/global-styles/variables.scss' as *;
+
+
+.thank-you-container {
+  background: hsla(213, 19%, 18%, 0.5);
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+  max-width: 32rem;
+  padding: 1.5rem;
+}
+
+.final-rating {
+  border-radius: 35px;
+  color: $clr-primary-orange;
+  font-size: .9rem;
+}
+
+.thank-you-text {
+  color: $clr-neutral-grey-300;
+}
+
+.home-link {
+  color: $clr-primary-orange;
+}
