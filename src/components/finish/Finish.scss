@@ -1,0 +1,25 @@
+@use '../../assets/global-styles/variables.scss' as *;
+
+
+.finish-title {
+  padding-bottom: 1rem;
+}
+
+.feedback-text {
+  display: flex;
+  align-items: center;
+}
+
+.arrow {
+  max-width: 100px;
+  height: auto;
+}
+
+.arrow-right {
+  transform: rotateY(180deg);
+}
+
+.feedback-link,
+.feedback-link:active {
+  color: $clr-primary-orange;
+}
