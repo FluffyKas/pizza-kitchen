@@ -27,7 +27,7 @@ const Base = ({ setNewPizza, newPizza }) => {
               </div>
             )
           })}
-          <OrangeButton nextPage={"/toppings"} text={"Next: Toppings"} />
+          {newPizza.base && <OrangeButton nextPage={"/toppings"} text={"Next: Toppings"} />}
         </fieldset>
       </form>
     </div>
