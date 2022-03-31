@@ -67,26 +67,3 @@ fieldset {
   opacity: 0;
   position: absolute;
 }
-
-.submit-btn {
-  background: $clr-primary-orange;
-  border: none;
-  border-radius: 35px;
-  color: $clr-neutral-white;
-  cursor: pointer;
-  display: block;
-  font-weight: 600;
-  letter-spacing: 1px;
-  margin-block: 2rem .5rem;
-  padding-block: .75rem;
-  text-transform: uppercase;
-  width: 100%;
-  transform: scale(1);
-  transition: all .25s ease-in;
-}
-
-.submit-btn:hover {
-  background: $clr-neutral-white;
-  color: $clr-primary-orange;
-  transform: scale(1.05);
-}

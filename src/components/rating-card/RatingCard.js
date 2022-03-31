@@ -1,7 +1,7 @@
 import './RatingCard.scss';
 import star from '../../assets/images/icon-star.svg';
 // import { useState } from 'react';
-import { Link } from "react-router-dom";
+import OrangeButton from '../orangebtn/OrangeButton';
 
 const RatingCard = () => {
 
@@ -35,9 +35,9 @@ const RatingCard = () => {
             <input type="radio" name="rating" id="5" value="5" onClick={selectRating} />
             <label htmlFor="5">5</label>
           </div>
-          <Link to="/thankyou" className="submit-btn">Submit</Link>
         </fieldset>
       </form>
+      <OrangeButton nextPage={"/thankyou"} text={"Submit"} className="submit-btn" />
 
     </div>
   );
