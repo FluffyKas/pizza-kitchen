@@ -1,3 +1,5 @@
+@use '../../assets/global-styles/variables.scss' as *;
+
 .contact-page__title {
   margin-bottom: 1rem;
 }
@@ -22,4 +24,30 @@
 .contact-form-btn {
   cursor: pointer;
   padding: .5rem 2.5rem;
+}
+
+.modal {
+  background: $clr-neutral-white;
+  border: 3px solid $clr-primary-orange;
+  color: $clr-neutral-blue-900;
+  padding: 2rem;
+  width: 28rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2000;
+
+  h2 {
+    padding-bottom: 1rem;
+  }
+}
+
+.backdrop {
+  opacity: .2;
+}
+
+.redirect-message {
+  font-style: italic;
+  padding-top: 2rem;
 }
