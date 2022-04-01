@@ -1,14 +1,11 @@
 import './RatingCard.scss';
 import star from '../../assets/images/icon-star.svg';
-// import { useState } from 'react';
 import OrangeButton from '../orangebtn/OrangeButton';
 
-const RatingCard = () => {
-
-  // const [activeRating, setActiveRating] = useState(null);
+const RatingCard = ({ activeRating, setActiveRating }) => {
 
   const selectRating = (e) => {
-    console.log(e.target.value)
+    setActiveRating(e.target.value)
   }
 
   return (
@@ -37,7 +34,7 @@ const RatingCard = () => {
           </div>
         </fieldset>
       </form>
-      <OrangeButton nextPage={"/thankyou"} text={"Submit"} className="submit-btn" />
+      {activeRating && <OrangeButton nextPage={"/thankyou"} text={"Submit"} className="submit-btn" />}
 
     </div>
   );
