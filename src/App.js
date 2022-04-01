@@ -15,6 +15,7 @@ import ContactPage from './components/contactpage/ContactPage';
 function App() {
 
   const [newPizza, setNewPizza] = useState({ base: '', toppings: [] });
+  const [activeRating, setActiveRating] = useState(null);
 
   return (
     <div className="App">
@@ -25,8 +26,8 @@ function App() {
           <Route path="/base" element={<Base newPizza={newPizza} setNewPizza={setNewPizza} />} />
           <Route path="/toppings" element={<Toppings newPizza={newPizza} setNewPizza={setNewPizza} />} />
           <Route path="/finish" element={<Finish newPizza={newPizza} />} />
-          <Route path="/rating" element={<RatingCard />} />
-          <Route path="/thankyou" element={<ThankYouCard />} />
+          <Route path="/rating" element={<RatingCard activeRating={activeRating} setActiveRating={setActiveRating} />} />
+          <Route path="/thankyou" element={<ThankYouCard activeRating={activeRating} />} />
           <Route path="/contact" element={<ContactPage />} />
         </Routes>
       </main>
