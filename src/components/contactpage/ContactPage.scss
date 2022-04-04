@@ -18,6 +18,8 @@
   margin-bottom: 1.5rem;
 }
 
+//CONTACT FORM
+
 .contact-form {
   display: flex;
   flex-direction: column;
@@ -87,8 +89,13 @@ textarea:focus-visible {
   border-radius: 5px;
   color: $clr-neutral-white;
   cursor: pointer;
-  padding: .5rem 2.5rem;
+  padding: .5rem 3rem;
   transition: all .2s ease-in;
+  margin: 0 auto;
+  @media(min-width: 38rem) {
+    margin: 0;
+    padding: .5rem 2.5rem;
+  }
 }
 
 .contact-form-btn:hover {
@@ -113,12 +120,16 @@ textarea:focus-visible {
   outline: 3px dashed $clr-neutral-white;
 }
 
+//MODAL
+
 .modal {
   background: $clr-neutral-white;
-  border: 3px solid $clr-primary-orange;
+  border: 3px dashed $clr-primary-orange;
+  border-radius: 5px;
   color: $clr-neutral-blue-900;
   padding: 2rem;
-  width: 28rem;
+  width: 90%;
+  max-width: 28rem;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -136,5 +147,61 @@ textarea:focus-visible {
 
 .redirect-message {
   font-style: italic;
-  padding-top: 2rem;
+  padding-top: 2.75rem;
+  font-size: .9rem;
+  opacity: .6;
+}
+
+//FOOTER
+
+footer {
+  background: $clr-primary-orange;
+  margin-top: 5rem;
+}
+
+.footer-inner-wrapper {
+  width: 90%;
+  max-width: 86rem;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 1.5rem;
+  padding-block: 1.75rem;
+  @media(min-width: 60rem) {
+    text-align: left;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+.contact-info {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  @media(min-width: 60rem) {
+    flex-direction: row;
+    gap: 3rem;
+  }
+}
+
+.contact-info-container h3 {
+  text-transform: uppercase;
+  padding-block-end: 1rem;
+}
+
+.social-media {
+  display: flex;
+  gap: 1.25rem;
+}
+
+.social-media img {
+  width: 25px;
+  transform: scale(1);
+  transition: all .2s ease-in;
+
+  &:hover {
+    transform: scale(1.15);
+  }
 }
