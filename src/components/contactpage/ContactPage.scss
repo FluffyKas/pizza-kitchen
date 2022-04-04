@@ -4,6 +4,7 @@
   text-align: center;
   max-width: 90%;
   margin: 0 auto;
+  padding-top: 7.6rem;
   @media(min-width: 38rem) {
     text-align: left;
     max-width: 34rem;
@@ -168,7 +169,7 @@ footer {
   align-items: center;
   text-align: center;
   gap: 1.5rem;
-  padding-block: 1.75rem;
+  padding-block: 2.5rem 2rem;
   @media(min-width: 60rem) {
     text-align: left;
     flex-direction: row;
