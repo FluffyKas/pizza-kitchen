@@ -1,5 +1,15 @@
 @use '../../assets/global-styles/variables.scss' as *;
 
+.contact-page {
+  text-align: center;
+  max-width: 90%;
+  margin: 0 auto;
+  @media(min-width: 38rem) {
+    text-align: left;
+    max-width: 34rem;
+  }
+}
+
 .contact-page__title {
   margin-bottom: 1rem;
 }
@@ -13,17 +23,94 @@
   flex-direction: column;
   align-items: flex-start;
   gap: 2rem;
+}
 
-  div {
-    display: flex;
-    justify-content: space-between;
+.input-wrapper {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  position: relative;
+
+  label {
+    position: absolute;
+    top: 1.25rem;
+    color: $clr-primary-orange;
+    left: 1rem;
+    transition: all .2s ease-in;
+    cursor: text;
+    font-size: 1rem;
+  }
+
+  input, textarea {
+    background: $clr-neutral-blue-900;
+    border: 2px solid $clr-neutral-white;
+    border-radius: 5px;
+    color: $clr-neutral-white;
+    padding: 1rem;
     width: 100%;
+  }
+
+  input:focus ~ label,
+  input:not(:placeholder-shown) ~ label,
+  textarea:focus ~ label,
+  textarea:not(:placeholder-shown) ~ label {
+    top: -0.75rem;
+    left: .5rem;
+    background: $clr-neutral-blue-900;
+    padding-inline: .75rem;
   }
 }
 
+input:focus,
+textarea:focus {
+  /* Provide a fallback style for browsers
+     that don't support :focus-visible */
+  outline: 3px dashed $clr-primary-orange;
+}
+
+input:focus:not(:focus-visible),
+textarea:focus:not(:focus-visible) {
+  /* Remove the focus indicator on mouse-focus for browsers
+     that do s  upport :focus-visible */
+  outline: none;
+}
+
+input:focus-visible, 
+textarea:focus-visible {
+  /* for browsers that do support :focus-visible */
+  outline: 3px dashed $clr-primary-orange;
+}
+
 .contact-form-btn {
+  background: $clr-primary-orange;
+  border: none;
+  border-radius: 5px;
+  color: $clr-neutral-white;
   cursor: pointer;
   padding: .5rem 2.5rem;
+  transition: all .2s ease-in;
+}
+
+.contact-form-btn:hover {
+  background: $clr-neutral-white;
+  color: $clr-primary-orange;
+}
+
+.contact-form-btn:focus {
+  /* Provide a fallback style for browsers
+     that don't support :focus-visible */
+  outline: 3px dashed $clr-neutral-white;
+}
+
+.contact-form-btn:focus:not(:focus-visible) {
+  /* Remove the focus indicator on mouse-focus for browsers
+     that do s  upport :focus-visible */
+  outline: none;
+}
+
+.contact-form-btn:focus-visible {
+  /* for browsers that do support :focus-visible */
+  outline: 3px dashed $clr-neutral-white;
 }
 
 .modal {
