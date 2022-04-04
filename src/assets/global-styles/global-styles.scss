@@ -7,6 +7,12 @@ body {
 main {
   background: $clr-neutral-blue-900;
   color: white;
-  padding-top: 15rem;
+  padding-top: 12rem;
   min-height: 100vh;
+  @media (min-width: 60rem) {
+    // background: url(../../assets/images/zsonak.png), $clr-neutral-blue-900;
+    background-repeat: repeat-x;
+    background-position: left bottom 1.5rem;
+    background-size: 50vw 10vh;
+  }
 }
