@@ -2,7 +2,10 @@
 
 header {
   position: fixed;
-  width: 100%;}
+  width: 100%;
+  background: $clr-neutral-blue-900;
+  z-index: 1000;
+}
 
 .header-inner-wrapper {
   margin: 0 auto;
