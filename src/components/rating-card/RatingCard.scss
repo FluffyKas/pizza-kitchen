@@ -1,14 +1,14 @@
 @use '../../assets/global-styles/variables.scss' as *;
 
 .rating-card {
-  background: $clr-neutral-blue-800;
+  background: var(--app-bg);
   border-radius: 10px;
   max-width: 24rem;
   padding: clamp(1.5rem,2vw,2rem);
 }
 
 .rating-card__img {
-  background: $clr-neutral-grey-300;
+  background: var(--clr-neutral-grey-300);
   border-radius: 50%;
   padding: .75rem;
 }
@@ -16,12 +16,12 @@
 // RATING CARD TEXTS
 
 .rating-card__title {
-  color: $clr-neutral-white;
+  color: var(--clr-neutral-white);
   font-size: 1.5rem;
 }
 
 .rating-card__description {
-  color: $clr-neutral-grey-200;
+  color: var(--clr-neutral-grey-200);
   padding-block: 1rem;
 }
 
@@ -38,7 +38,7 @@ fieldset {
 }
 
 .rating-card__form label {
-  color: $clr-neutral-grey-200;
+  color: var(--clr-neutral-grey-200);
   cursor: pointer;
   font-weight: 600;
   position: relative;
@@ -52,7 +52,7 @@ fieldset {
 .rating-card__form label::after {
   content: '';
   position: absolute;
-  background: $clr-neutral-grey-300;
+  background: var(--clr-neutral-grey-300);
   border-radius: 50%;
   width: 2.5rem;
   height: 2.5rem;
