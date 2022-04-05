@@ -3,7 +3,7 @@ import OrangeButton from '../orangebtn/OrangeButton';
 
 const Base = ({ setNewPizza, newPizza }) => {
 
-  const bases = ['classic', 'thin', 'stuffed', 'chicago-style']
+  const bases = ['Classic', 'Thin', 'Stuffed', 'Chicago-style']
 
   const addBase = (e) => {
     setNewPizza(
@@ -16,12 +16,12 @@ const Base = ({ setNewPizza, newPizza }) => {
 
   return (
     <div className="base container">
-      <h1 className="base-title">Choose your base: </h1>
-      <form>
+      <form className="base-form">
         <fieldset>
+          <legend className="base-title fw-700">Choose your base:</legend>
           {bases.map((base, index) => {
             return (
-              <div key={index}>
+              <div key={index} className="base-input-container fw-500">
                 <input type="radio" id={base} value={base} name="pizza-base" onChange={addBase} />
                 <label htmlFor={base}>{base}</label>
               </div>
