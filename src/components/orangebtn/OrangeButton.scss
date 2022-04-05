@@ -1,10 +1,10 @@
 @use '../../assets/global-styles/variables.scss' as *;
 
 .orange-button {
-  background: $clr-primary-orange;
+  background: var(--clr-accent);
   border: none;
   border-radius: 35px;
-  color: $clr-neutral-white;
+  color: var(--clr-neutral-white);
   cursor: pointer;
   display: block;
   font-weight: 600;
@@ -18,7 +18,5 @@
 }
 
 .orange-button:hover {
-  background: $clr-neutral-white;
-  color: $clr-primary-orange;
   transform: scale(1.05);
 }
