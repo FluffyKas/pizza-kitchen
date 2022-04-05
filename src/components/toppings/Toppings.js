@@ -1,4 +1,5 @@
 import OrangeButton from '../orangebtn/OrangeButton';
+import './Toppings.scss';
 
 const Toppings = ({ newPizza, setNewPizza }) => {
 
