@@ -2,6 +2,7 @@
 
 
 .finish-title {
+  padding-top: 15rem;
   padding-bottom: 1rem;
 }
 
@@ -21,5 +22,5 @@
 
 .feedback-link,
 .feedback-link:active {
-  color: $clr-primary-orange;
+  color: var(--clr-accent);
 }

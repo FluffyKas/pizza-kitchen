@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
-import delivery from '../../assets/images/online-food-delivery6.png';
-import arrow from '../../assets/images/up-arrow4.png';
+import delivery from '../../assets/images/online-food-delivery.png';
+import arrow from '../../assets/images/up-arrow.png';
 import './Finish.scss'
 
 const Finish = ({ newPizza }) => {
