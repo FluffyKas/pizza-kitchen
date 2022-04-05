@@ -1,10 +1,13 @@
 @use '../../assets/global-styles/variables.scss' as *;
 
+//General styles
+
 header {
   position: fixed;
   width: 100%;
-  background: $clr-neutral-blue-900;
+  background: var(--app-bg);
   z-index: 1000;
+  box-shadow: 0 2px 20px 0 var(--box-shadow);
 }
 
 .header-inner-wrapper {
@@ -16,21 +19,41 @@ header {
   justify-content: space-between;
 }
 
+//Logo
+
 .logo-container {
   display: flex;
   align-items: center;
-  color: white;
+  color: var(--text-clr);
   gap: 1rem;
   letter-spacing: 1px;
+  transition: all .2s ease-in;
 
   span {
     padding-top: .75rem;
   }
 }
 
+.logo-container:hover {
+  color: var(--clr-accent);
+
+  .logo-img {
+    filter: invert(66%) sepia(34%) saturate(6865%) hue-rotate(348deg) brightness(98%) contrast(100%);
+  }
+}
+
 .logo-img {
   width: 50px; 
-  filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(93deg) brightness(103%) contrast(103%);
+  filter: var(--logo-filter);
+  transition: all .2s ease-in;
+}
+
+//Left side/nav
+
+.header-left {
+  display: flex;
+  align-items: center;
+  gap: 5rem;
 }
 
 .nav-menu {
@@ -50,14 +73,14 @@ header {
 }
 
 .nav-menu-link {
-  color: white;
+  color: var(--text-clr);
   cursor: pointer;
   letter-spacing: 1px;
   transition: all .2s ease;
 }
 
 .nav-menu-link:hover {
-  color: $clr-primary-orange;
+  color: var(--clr-accent);
 }
 
 .hamburger-btn {
@@ -70,5 +93,14 @@ header {
   right: 2rem;
   @media(min-width: 40rem) {
     display: none;
+  }
+}
+
+.theme-toggle {
+  all: unset;
+  cursor: pointer;
+
+  img {
+    width: clamp(1.5rem, 4.5vw, 2rem);
   }
 }
