@@ -14,14 +14,14 @@
 
 .final-rating {
   border-radius: 35px;
-  color: $clr-primary-orange;
+  color: var(--clr-accent);
   font-size: .9rem;
 }
 
 .thank-you-text {
-  color: $clr-neutral-grey-300;
+  color: var(--clr-neutral-grey-300);
 }
 
 .home-link {
-  color: $clr-primary-orange;
+  color: var(--clr-accent);
 }
