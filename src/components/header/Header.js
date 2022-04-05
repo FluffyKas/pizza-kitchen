@@ -54,8 +54,8 @@ const Header = ({ theme, setTheme }) => {
             <button className="hamburger-btn" aria-expanded={isOpened ? "true" : "false"} aria-controls="nav-menu" onClick={toggleMenu}>
               {
                 isOpened ?
-                  <img src={closeBtn} alt="" aria-hidden="true" /> :
-                  <img src={hamburger} alt="" aria-hidden="true" />
+                  <img className="menu-icon" src={closeBtn} alt="" aria-hidden="true" /> :
+                  <img className="menu-icon" src={hamburger} alt="" aria-hidden="true" />
               }
               <span className="sr-only">Menu</span>
             </button>
@@ -70,7 +70,7 @@ const Header = ({ theme, setTheme }) => {
 
           </nav>
 
-          <button onClick={switchTheme} title={`Switch to ${theme} theme`} aria-label={`Switch to ${theme} theme`} className="theme-toggle">
+          <button onClick={switchTheme} title={`Switch to ${theme === 'light' ? 'dark' : 'light'} theme`} aria-label={`Switch to ${theme === 'light' ? 'dark' : 'light'} theme`} className="theme-toggle">
             {
               theme === 'dark' ?
                 <img src={sunIcon} alt="" aria-hidden="true" /> :
