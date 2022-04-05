@@ -4,7 +4,7 @@
   text-align: center;
   max-width: 90%;
   margin: 0 auto;
-  padding-top: 7.6rem;
+  padding-top: 9.3rem;
   @media(min-width: 38rem) {
     text-align: left;
     max-width: 34rem;
@@ -37,7 +37,7 @@
   label {
     position: absolute;
     top: 1.25rem;
-    color: $clr-primary-orange;
+    color: var(--clr-accent);
     left: 1rem;
     transition: all .2s ease-in;
     cursor: text;
@@ -45,10 +45,10 @@
   }
 
   input, textarea {
-    background: $clr-neutral-blue-900;
-    border: 2px solid $clr-neutral-white;
+    background: var(--app-bg);
+    border: 2px solid var(--text-clr);
     border-radius: 5px;
-    color: $clr-neutral-white;
+    color: var(--text-clr);
     padding: 1rem;
     width: 100%;
   }
@@ -59,7 +59,7 @@
   textarea:not(:placeholder-shown) ~ label {
     top: -0.75rem;
     left: .5rem;
-    background: $clr-neutral-blue-900;
+    background: var(--app-bg);
     padding-inline: .75rem;
   }
 }
@@ -68,7 +68,7 @@ input:focus,
 textarea:focus {
   /* Provide a fallback style for browsers
      that don't support :focus-visible */
-  outline: 3px dashed $clr-primary-orange;
+  outline: 3px dashed var(--clr-accent);
 }
 
 input:focus:not(:focus-visible),
@@ -81,14 +81,14 @@ textarea:focus:not(:focus-visible) {
 input:focus-visible, 
 textarea:focus-visible {
   /* for browsers that do support :focus-visible */
-  outline: 3px dashed $clr-primary-orange;
+  outline: 3px dashed var(--clr-accent);
 }
 
 .contact-form-btn {
-  background: $clr-primary-orange;
+  background: var(--clr-accent);
   border: none;
   border-radius: 5px;
-  color: $clr-neutral-white;
+  color: var(--text-clr);
   cursor: pointer;
   padding: .5rem 3rem;
   transition: all .2s ease-in;
@@ -100,14 +100,14 @@ textarea:focus-visible {
 }
 
 .contact-form-btn:hover {
-  background: $clr-neutral-white;
-  color: $clr-primary-orange;
+  background: var(--text-clr);
+  color: var(--clr-accent);
 }
 
 .contact-form-btn:focus {
   /* Provide a fallback style for browsers
      that don't support :focus-visible */
-  outline: 3px dashed $clr-neutral-white;
+  outline: 3px dashed var(--text-clr);
 }
 
 .contact-form-btn:focus:not(:focus-visible) {
@@ -118,16 +118,16 @@ textarea:focus-visible {
 
 .contact-form-btn:focus-visible {
   /* for browsers that do support :focus-visible */
-  outline: 3px dashed $clr-neutral-white;
+  outline: 3px dashed var(--text-clr);
 }
 
 //MODAL
 
 .modal {
-  background: $clr-neutral-white;
-  border: 3px dashed $clr-primary-orange;
+  background: white;
+  border: 3px dashed var(--text-clr);
   border-radius: 5px;
-  color: $clr-neutral-blue-900;
+  color: var(--clr-neutral-blue-900);
   padding: 2rem;
   width: 90%;
   max-width: 28rem;
@@ -156,7 +156,7 @@ textarea:focus-visible {
 //FOOTER
 
 footer {
-  background: $clr-primary-orange;
+  background: var(--clr-accent);
   margin-top: 5rem;
 }
 
@@ -201,6 +201,7 @@ footer {
   width: 25px;
   transform: scale(1);
   transition: all .2s ease-in;
+  filter: var(--logo-filter);
 
   &:hover {
     transform: scale(1.15);

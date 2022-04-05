@@ -16,7 +16,7 @@ const ContactPage = () => {
     setMessage({ ...message, submitted: true })
     setTimeout(() => {
       navigate('/');
-    }, 2000);
+    }, 3500);
   }
 
   return (
@@ -34,6 +34,7 @@ const ContactPage = () => {
                   type="text"
                   id="name"
                   placeholder=" "
+                  autocomplete="off"
                   value={message.name}
                   onChange={(e) => setMessage({ ...message, name: e.target.value })}
                   required />
@@ -41,9 +42,10 @@ const ContactPage = () => {
               </div>
               <div className="input-wrapper">
                 <input
-                  type="text"
+                  type="email"
                   id="email"
                   placeholder=" "
+                  autocomplete="off"
                   value={message.email}
                   onChange={(e) => setMessage({ ...message, email: e.target.value })}
                   required />
@@ -54,6 +56,7 @@ const ContactPage = () => {
                   type="text"
                   id="subject"
                   placeholder=" "
+                  autocomplete="off"
                   value={message.subject}
                   onChange={(e) => setMessage({ ...message, subject: e.target.value })}
                   required />
@@ -64,6 +67,7 @@ const ContactPage = () => {
                   type="text"
                   id="message"
                   placeholder=" "
+                  autocomplete="off"
                   value={message.message}
                   onChange={(e) => setMessage({ ...message, message: e.target.value })}
                   required>
