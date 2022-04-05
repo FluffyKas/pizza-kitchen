@@ -11,15 +11,21 @@ import RatingCard from './components/rating-card/RatingCard';
 import ThankYouCard from './components/thank-you-card/ThankYouCard';
 import Header from './components/header/Header';
 import ContactPage from './components/contactpage/ContactPage';
+import SignUp from './components/user/signup/Signup';
+import About from './components/about/About';
+import useLocalStorage from 'use-local-storage';
 
 function App() {
+
+  const defaultDark = window.matchMedia('(perfers-color-scheme: dark)').matches;
+  const [theme, setTheme] = useLocalStorage('theme', defaultDark ? 'dark' : 'light');
 
   const [newPizza, setNewPizza] = useState({ base: '', toppings: [] });
   const [activeRating, setActiveRating] = useState(null);
 
   return (
-    <div className="App">
-      <Header />
+    <div className="App" data-theme={theme}>
+      <Header theme={theme} setTheme={setTheme} />
       <main>
         <Routes>
           <Route path="/" element={<Home newPizza={newPizza} setNewPizza={setNewPizza} />} />
@@ -29,6 +35,8 @@ function App() {
           <Route path="/rating" element={<RatingCard activeRating={activeRating} setActiveRating={setActiveRating} />} />
           <Route path="/thankyou" element={<ThankYouCard activeRating={activeRating} />} />
           <Route path="/contact" element={<ContactPage />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/signup" element={<SignUp />} />
         </Routes>
       </main>
     </div>
