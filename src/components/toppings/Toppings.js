@@ -19,10 +19,10 @@ const Toppings = ({ newPizza, setNewPizza }) => {
     <div className="toppings container">
       <h1>Choose your Toppings:</h1>
       <form>
-        <fieldset>
+        <fieldset className="choice-fieldset">
           {toppings.map((topping, index) => {
             return (
-              <div key={index}>
+              <div key={index} className="choice-input-container fw-500">
                 <input type="checkbox" id={topping} value={topping} name={topping} onChange={addToppings} />
                 <label htmlFor={topping}>{topping}</label>
               </div>

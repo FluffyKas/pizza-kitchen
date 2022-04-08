@@ -1,5 +1,6 @@
 import './Base.scss';
 import OrangeButton from '../orangebtn/OrangeButton';
+import { useState } from 'react';
 
 const Base = ({ setNewPizza, newPizza }) => {
 
@@ -16,12 +17,12 @@ const Base = ({ setNewPizza, newPizza }) => {
 
   return (
     <div className="base container">
-      <form className="base-form">
-        <fieldset>
+      <form>
+        <fieldset className="choice-fieldset">
           <legend className="base-title fw-700">Choose your base:</legend>
           {bases.map((base, index) => {
             return (
-              <div key={index} className="base-input-container fw-500">
+              <div key={index} className="choice-input-container fw-500">
                 <input type="radio" id={base} value={base} name="pizza-base" onChange={addBase} />
                 <label htmlFor={base}>{base}</label>
               </div>
