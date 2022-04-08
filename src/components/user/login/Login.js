@@ -1,20 +1,19 @@
-import './SignUp.scss'
-import { useState } from 'react'
+import './Login.scss';
+import { useState } from 'react';
+import { Link, useNavigate } from "react-router-dom";
 import { useAuth } from '../../../context/AuthContext'
-import { useNavigate } from "react-router-dom"
 import { auth } from '../../../firebase'
 
-const SignUp = () => {
-
+const Login = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [confirmPassword, setConfirmPassword] = useState('');
   const [error, setError] = useState('');
   const [loading, setLoading] = useState(false);
-  const { signup } = useAuth()
+  const { login } = useAuth()
   const navigate = useNavigate();
 
-  async function handleSubmit(e) {
+  async function handleSignin(e) {
     e.preventDefault();
 
     if (password !== confirmPassword) {
@@ -24,21 +23,20 @@ const SignUp = () => {
     try {
       setError('')
       setLoading(true)
-      await signup(auth, email, password)
+      await login(auth, email, password)
       navigate('/');
     } catch {
-      setError('Failed to create an account')
+      setError('Failed to sign in')
     }
     setLoading(false)
   }
 
   return (
     <div className="container signup">
-      <h1 className="signup__title uppercase">Signup</h1>
-      {error && <p>{error}</p>}
-      <form onSubmit={handleSubmit}>
+      <h1 className="signup__title uppercase">Login</h1>
+      <form onSubmit={handleSignin}>
         <fieldset className="text-fieldset">
-          <legend className="sr-only">Signup form</legend>
+          <legend className="sr-only">Login form</legend>
           <div className="input-wrapper">
             <input
               type="email"
@@ -57,23 +55,14 @@ const SignUp = () => {
               autoComplete="off"
               onChange={(e) => setPassword(e.target.value)}
               required />
-            <label htmlFor="password">Password:</label>
+            <label htmlFor="subject">Password:</label>
           </div>
-          <div className="input-wrapper">
-            <input
-              type="password"
-              id="confirm-password"
-              placeholder=" "
-              autoComplete="off"
-              onChange={(e) => setConfirmPassword(e.target.value)}
-              required />
-            <label htmlFor="confirm-password">Password confirmation:</label>
-          </div>
-          <button disabled={loading} className="form-btn">Sign up</button>
+          <button className="form-btn">Login</button>
         </fieldset>
       </form>
+      <p>Don't have an account? <Link to="/signup" className="signup-link">Sign up here</Link></p>
     </div>
   );
 }
 
-export default SignUp;
+export default Login;

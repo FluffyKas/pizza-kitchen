@@ -1,0 +1,10 @@
+@use '../../../assets/global-styles/variables.scss' as *;
+
+.signup-link {
+  color: var(--clr-accent);
+  transition: color .2s ease-in;
+}
+
+.signup-link:hover {
+  color: var(--text-clr);
+}
