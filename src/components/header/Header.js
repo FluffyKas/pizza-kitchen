@@ -6,8 +6,22 @@ import sunIcon from '../../assets/images/icon-sun.svg';
 import moonIcon from '../../assets/images/icon-moon.svg';
 import { Link } from "react-router-dom";
 import { useEffect, useState } from 'react';
+import { useAuth } from '../../context/AuthContext'
 
 const Header = ({ theme, setTheme }) => {
+
+  const { currentUser, logout } = useAuth()
+  const [error, setError] = useState('');
+
+  async function handleLogOut() {
+    setError('')
+
+    try {
+      await logout()
+    } catch {
+      setError('failed to log out')
+    }
+  }
 
   // Theme Switcher
   function switchTheme() {
@@ -36,9 +50,6 @@ const Header = ({ theme, setTheme }) => {
 
   }, []);
 
-  const navLinks = ['contact', 'about us', 'signup/login'];
-
-
   return (
     <header>
       <div className="header-inner-wrapper">
@@ -62,9 +73,12 @@ const Header = ({ theme, setTheme }) => {
 
             {(isOpened || screenWidth > 640) && (
               <ul id="nav-menu" className="nav-menu uppercase">
-                {navLinks.map((link, index) => {
-                  return <li key={index}><Link to={`/${link}`} className="nav-menu-link fw-500">{link}</Link></li>
-                })}
+                <li><Link to="/contact" className="nav-menu-link fw-500">Contact</Link></li>
+                <li><Link to="about" className="nav-menu-link fw-500">About Us</Link></li>
+                {currentUser && <li className="nav-menu-link fw-500">Signed in as {currentUser.email}</li>}
+                <li><Link to="/login" className="nav-menu-link fw-500">Signup/Login</Link></li>
+                <li><button className="logout-btn fw-500" onClick={handleLogOut}>Log out</button></li>
+                {error}
               </ul>
             )}
 
