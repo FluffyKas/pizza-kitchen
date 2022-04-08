@@ -23,6 +23,7 @@
 
   // Backgrounds
   --app-bg: var(--clr-neutral-white);
+  --modal-bg: var(--clr-neutral-white);
   --text-clr: var(--clr-neutral-blue-900);
   --clr-accent: var(--clr-primary-orange);
   --box-shadow: hsla(217, 12%, 63%, 0.2);
@@ -33,6 +34,7 @@
 [data-theme='dark'] {
 
   --app-bg: var(--clr-neutral-blue-900);
+  --modal-bg: var(--clr-neutral-blue-800);
   --text-clr: var(--clr-neutral-white);
   --clr-accent: var(--clr-primary-orange);
   --box-shadow: var(--app-bg);
