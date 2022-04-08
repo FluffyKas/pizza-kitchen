@@ -20,7 +20,12 @@
   transform: rotateY(180deg);
 }
 
-.feedback-link,
-.feedback-link:active {
+.feedback-modal-btn {
+  all: unset;
   color: var(--clr-accent);
+  cursor: pointer;
+
+  &:hover {
+    color: var(--text-clr);
+  }
 }

@@ -4,7 +4,7 @@ import arrow from '../../assets/images/up-arrow.png';
 import RatingCard from "../rating-card/RatingCard";
 import './Finish.scss'
 
-const Finish = ({ newPizza, activeRating, setActiveRating }) => {
+const Finish = ({ newPizza }) => {
 
   const [activeModal, setActiveModal] = useState(false);
 
@@ -22,11 +22,11 @@ const Finish = ({ newPizza, activeRating, setActiveRating }) => {
 
         <div className="feedback-text">
           <span><img src={arrow} alt="" aria-hidden="true" className="arrow arrow-left" /></span>
-          <p>If you got a minute, tell us <button className="feedback-modal" onClick={toggleModal}>how we did!</button></p>
+          <p>If you got a minute, tell us <button className="feedback-modal-btn" onClick={toggleModal}>how we did!</button></p>
           <span><img src={arrow} alt="" aria-hidden="true" className="arrow arrow-right" /></span>
         </div>
       </div>
-      {activeModal && <RatingCard activeRating={activeRating} setActiveRating={setActiveRating} />}
+      {activeModal && <RatingCard />}
     </div >
   );
 }

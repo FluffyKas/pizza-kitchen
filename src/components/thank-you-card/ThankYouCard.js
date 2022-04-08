@@ -4,7 +4,7 @@ import './ThankYouCard.scss';
 
 const ThankYouCard = ({ activeRating }) => {
   return (
-    <div className="container thank-you-container text-center">
+    <div className="container thank-you-card">
       <img src={thankyou} alt="" aria-hidden="true" />
       <p className="final-rating">You selected {activeRating} out of 5</p>
       <p className="thank-you-title">Thank you!</p>
