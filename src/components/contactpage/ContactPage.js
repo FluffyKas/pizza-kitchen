@@ -27,15 +27,14 @@ const ContactPage = () => {
           <h1 className="contact-page__title uppercase">Get in touch</h1>
           <p className="contact-page__description">Have a question or feedback? We would love to hear from you!</p>
           <form onSubmit={submitMessage}>
-            <fieldset className="contact-form">
+            <fieldset className="text-fieldset">
               <legend className="sr-only">Contact Form</legend>
               <div className="input-wrapper">
                 <input
                   type="text"
                   id="name"
                   placeholder=" "
-                  autocomplete="off"
-                  value={message.name}
+                  autoComplete="off"
                   onChange={(e) => setMessage({ ...message, name: e.target.value })}
                   required />
                 <label htmlFor="name">First name:</label>
@@ -45,7 +44,7 @@ const ContactPage = () => {
                   type="email"
                   id="email"
                   placeholder=" "
-                  autocomplete="off"
+                  autoComplete="off"
                   value={message.email}
                   onChange={(e) => setMessage({ ...message, email: e.target.value })}
                   required />
@@ -56,7 +55,7 @@ const ContactPage = () => {
                   type="text"
                   id="subject"
                   placeholder=" "
-                  autocomplete="off"
+                  autoComplete="off"
                   value={message.subject}
                   onChange={(e) => setMessage({ ...message, subject: e.target.value })}
                   required />
@@ -67,14 +66,14 @@ const ContactPage = () => {
                   type="text"
                   id="message"
                   placeholder=" "
-                  autocomplete="off"
+                  autoComplete="off"
                   value={message.message}
                   onChange={(e) => setMessage({ ...message, message: e.target.value })}
                   required>
                 </textarea>
                 <label htmlFor="message">Message:</label>
               </div>
-              <button className="contact-form-btn">Send</button>
+              <button className="form-btn">Send</button>
             </fieldset>
           </form>
         </div>
