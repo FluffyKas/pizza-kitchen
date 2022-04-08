@@ -7,7 +7,6 @@ import { auth } from '../../../firebase'
 const Login = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
-  const [confirmPassword, setConfirmPassword] = useState('');
   const [error, setError] = useState('');
   const [loading, setLoading] = useState(false);
   const { login } = useAuth()
@@ -15,10 +14,6 @@ const Login = () => {
 
   async function handleSignin(e) {
     e.preventDefault();
-
-    if (password !== confirmPassword) {
-      return setError('Passwords do not match')
-    }
 
     try {
       setError('')
@@ -35,6 +30,7 @@ const Login = () => {
     <div className="container signup">
       <h1 className="signup__title uppercase">Login</h1>
       <form onSubmit={handleSignin}>
+        {error}
         <fieldset className="text-fieldset">
           <legend className="sr-only">Login form</legend>
           <div className="input-wrapper">
@@ -57,7 +53,7 @@ const Login = () => {
               required />
             <label htmlFor="subject">Password:</label>
           </div>
-          <button className="form-btn">Login</button>
+          <button disabled={loading} className="form-btn">Login</button>
         </fieldset>
       </form>
       <p>Don't have an account? <Link to="/signup" className="signup-link">Sign up here</Link></p>
