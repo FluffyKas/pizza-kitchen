@@ -28,7 +28,7 @@ const Login = () => {
 
   return (
     <div className="container signup">
-      <h1 className="signup__title uppercase">Login</h1>
+      <h1 className="form-title uppercase">Login</h1>
       <form onSubmit={handleSignin}>
         {error && <p className="error-msg">{error}</p>}
         <fieldset className="text-fieldset">
@@ -56,7 +56,7 @@ const Login = () => {
           <button disabled={loading} className="form-btn">Login</button>
         </fieldset>
       </form>
-      <div className="login-extra-options">
+      <div className="extra-options">
         <p><Link to="/forgot-password" className="signup-link">Forgot your password?</Link></p>
         <p>Don't have an account? <Link to="/signup" className="signup-link">Sign up here</Link></p>
       </div>

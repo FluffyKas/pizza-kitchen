@@ -1,7 +1,7 @@
 import './SignUp.scss'
 import { useState } from 'react'
 import { useAuth } from '../../../context/AuthContext'
-import { useNavigate } from "react-router-dom"
+import { Link, useNavigate } from "react-router-dom"
 import { auth } from '../../../firebase'
 
 const SignUp = () => {
@@ -34,7 +34,7 @@ const SignUp = () => {
 
   return (
     <div className="container signup">
-      <h1 className="signup__title uppercase">Signup</h1>
+      <h1 className="form-title uppercase">Signup</h1>
       {error && <p className="error-msg">{error}</p>}
       <form onSubmit={handleSubmit}>
         <fieldset className="text-fieldset">
@@ -71,6 +71,9 @@ const SignUp = () => {
           </div>
           <button disabled={loading} className="form-btn">Sign up</button>
         </fieldset>
+        <div className="extra-options">
+          <p>Already have an account? <Link to="/login" className="signup-link">Log in here</Link></p>
+        </div>
       </form>
     </div>
   );
