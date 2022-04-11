@@ -39,13 +39,15 @@ Users should be able to:
 
 ## My process
 
-This project started out as a newbie level Frontend Mentor challenge. I wanted to practice React and a small component such as this one felt like a commitment I can make >.< By the end of it, I felt bad though because I didn't feel like I learned anything so I decided to add a few bits.
+<!-- This project started out as a newbie level Frontend Mentor challenge. I wanted to practice React and a small component such as this one felt like a commitment I can make >.< By the end of it, I felt bad though because I didn't feel like I learned anything so I decided to add a few bits.
 
 First, a pizza-creation function. Then a Contact form to practice form handling. At this point, I had to add routing as well. And then I enjoyed forms so much (and the CSS I came up with for it >.<) that I wanted to use it elsewhere. So I added login and signup option. For this I had to look up authentication and Firebase, as I knew nothing about these things. Then I reused my dark/light theme toggle from a previous project and implemented it here with this project colours. Then I decided it would make the most sense, if the actual rating card / thank you card components were transformed into modals only.
 
 So yes. The original idea ended up being some tiny popup in a somewhat bigger website.
 
-Disclaimer: I'm not a designer, nor am I aiming to be very good at it right now. This is just some pet project to practice React. And I'm sorry if it hurts the eyes >.<
+Disclaimer: I'm not a designer, nor am I aiming to be very good at it right now. This is just some pet project to practice React. And I'm sorry if it hurts the eyes >.< -->
+
+In Progress
 
 ### Built with
 
