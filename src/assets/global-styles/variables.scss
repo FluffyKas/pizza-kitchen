@@ -26,7 +26,7 @@
   --modal-bg: var(--clr-neutral-white);
   --text-clr: var(--clr-neutral-blue-900);
   --clr-accent: var(--clr-primary-orange);
-  --box-shadow: hsla(217, 12%, 63%, 0.2);
+  --box-shadow: hsla(217, 12%, 63%, 0.3);
   --logo-filter: invert(5%) sepia(2%) saturate(4868%) hue-rotate(177deg) brightness(93%) contrast(93%);
   --home-bg: url(../../assets/images/ingredients-light.png)
 }
@@ -38,10 +38,14 @@
   --text-clr: var(--clr-neutral-white);
   --clr-accent: var(--clr-primary-orange);
   --box-shadow: var(--app-bg);
-  --logo-filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(93deg) brightness(103%) contrast(103%);
+  --logo-filter: $filter-white;
   --home-bg: url(../../assets/images/ingredients-dark.png)
 }
 
 //FONT FAMILIES
 
 $ff-main: 'Overpass', sans-serif;
+
+//SVG FILTERS
+
+$filter-white: invert(100%) sepia(0%) saturate(0%) hue-rotate(93deg) brightness(103%) contrast(103%);
