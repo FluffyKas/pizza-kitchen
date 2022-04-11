@@ -14,6 +14,7 @@ import ContactPage from './components/contactpage/ContactPage';
 import About from './components/about/About';
 import Login from './components/user/login/Login';
 import SignUp from './components/user/signup/Signup';
+import ForgotPassword from './components/user/forgotpw/ForgotPassword';
 
 function App() {
 
@@ -35,6 +36,7 @@ function App() {
             <Route path="/contact" element={<ContactPage />} />
             <Route path="/about" element={<About />} />
             <Route path="/login" element={<Login />} />
+            <Route path="/forgot-password" element={<ForgotPassword />} />
             <Route path="/signup" element={<SignUp />} />
           </Routes>
         </main>
