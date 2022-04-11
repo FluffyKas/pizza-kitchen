@@ -63,14 +63,14 @@ In Progress
 
 ### What I learned
 
-- Framer Motion
+<!-- - Framer Motion
 - context
 - useState vs useRef
 - input handling
 - routing, useNavigate()
 - Firebase
 - modals with react - surprisingly easy
-  (will add more once the version 1 of this project is done)
+  (will add more once the version 1 of this project is done) -->
 
 ### Continued development
 
