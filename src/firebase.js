@@ -2,12 +2,12 @@ import { initializeApp } from "firebase/app"
 import { getAuth } from "firebase/auth"
 
 const firebaseConfig = {
-  apiKey: process.env.REACT_APP_FIREBASE_API_KEY,
-  authDomain: process.env.REACT_APP_FIREBASE_AUTH_DOMAIN,
-  projectId: process.env.REACT_APP_FIREBASE_PROJECT_ID,
-  storageBucket: process.env.REACT_APP_FIREBASE_STORAGE_BUCKET,
-  messagingSenderId: process.env.REACT_APP_FIREBASE_MESSAGING_SENDER_ID,
-  appId: process.env.REACT_APP_FIREBASE_APP_ID
+  apiKey: "AIzaSyBpbAD9jPWdMzTSrA7oHEpddXkJc5g1nsA",
+  authDomain: "pizza-kitchen-development.firebaseapp.com",
+  projectId: "pizza-kitchen-development",
+  storageBucket: "pizza-kitchen-development.appspot.com",
+  messagingSenderId: "862439627643",
+  appId: "1:862439627643:web:cf2092a3fef91525863bde"
 }
 
 initializeApp(firebaseConfig)
