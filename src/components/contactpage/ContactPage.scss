@@ -1,10 +1,10 @@
 @use '../../assets/global-styles/variables.scss' as *;
 
 .contact-page {
-  text-align: center;
   max-width: 90%;
   margin: 0 auto;
-  padding-top: 9.3rem;
+  padding-top: 7.6rem;
+  text-align: center;
   @media(min-width: 38rem) {
     text-align: left;
     max-width: 34rem;
@@ -55,17 +55,18 @@
 
 footer {
   background: var(--clr-accent);
+  color: var(--clr-neutral-white);
   margin-top: 5rem;
 }
 
 .footer-inner-wrapper {
-  width: 90%;
-  max-width: 86rem;
-  margin: 0 auto;
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
+  width: 90%;
+  max-width: 86rem;
+  margin: 0 auto;
   gap: 1.5rem;
   padding-block: 2.5rem 2rem;
   @media(min-width: 60rem) {
@@ -86,8 +87,8 @@ footer {
 }
 
 .contact-info-container h3 {
-  text-transform: uppercase;
   padding-block-end: 1rem;
+  text-transform: uppercase;
 }
 
 .social-media {
@@ -99,7 +100,7 @@ footer {
   width: 25px;
   transform: scale(1);
   transition: all .2s ease-in;
-  filter: var(--logo-filter);
+  filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(93deg) brightness(103%) contrast(103%);
 
   &:hover {
     transform: scale(1.15);
