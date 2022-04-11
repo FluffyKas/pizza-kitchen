@@ -21,7 +21,7 @@ const Login = () => {
       await login(auth, email, password)
       navigate('/');
     } catch {
-      setError('Failed to sign in')
+      setError('Incorrect email or password')
     }
     setLoading(false)
   }
@@ -30,7 +30,7 @@ const Login = () => {
     <div className="container signup">
       <h1 className="signup__title uppercase">Login</h1>
       <form onSubmit={handleSignin}>
-        {error}
+        {error && <p className="error-msg">{error}</p>}
         <fieldset className="text-fieldset">
           <legend className="sr-only">Login form</legend>
           <div className="input-wrapper">
@@ -51,7 +51,7 @@ const Login = () => {
               autoComplete="off"
               onChange={(e) => setPassword(e.target.value)}
               required />
-            <label htmlFor="subject">Password:</label>
+            <label htmlFor="password">Password:</label>
           </div>
           <button disabled={loading} className="form-btn">Login</button>
         </fieldset>

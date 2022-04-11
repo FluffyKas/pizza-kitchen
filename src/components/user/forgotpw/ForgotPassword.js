@@ -30,8 +30,8 @@ const ForgotPassword = () => {
     <div className="container signup">
       <h1 className="signup__title uppercase">Password reset</h1>
       <form onSubmit={handleReset}>
-        {error}
-        {message}
+        {error && <p className="error-msg">{error}</p>}
+        {message && <p className="success-msg">{message}</p>}
         <fieldset className="text-fieldset">
           <legend className="sr-only">Password reset form</legend>
           <div className="input-wrapper">
@@ -47,7 +47,7 @@ const ForgotPassword = () => {
           <button disabled={loading} className="form-btn">Reset password</button>
         </fieldset>
       </form>
-      <Link to="/login">Back to login</Link>
+      <Link className="signup-link" to="/login">Back to login</Link>
     </div>
   );
 }

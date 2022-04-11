@@ -35,7 +35,7 @@ const SignUp = () => {
   return (
     <div className="container signup">
       <h1 className="signup__title uppercase">Signup</h1>
-      {error && <p>{error}</p>}
+      {error && <p className="error-msg">{error}</p>}
       <form onSubmit={handleSubmit}>
         <fieldset className="text-fieldset">
           <legend className="sr-only">Signup form</legend>
