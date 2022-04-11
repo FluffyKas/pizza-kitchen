@@ -76,8 +76,8 @@ const Header = ({ theme, setTheme }) => {
                 <li><Link to="/contact" className="nav-menu-link fw-500">Contact</Link></li>
                 <li><Link to="about" className="nav-menu-link fw-500">About Us</Link></li>
                 {currentUser && <li className="nav-menu-link fw-500">Signed in as {currentUser.email}</li>}
-                <li><Link to="/login" className="nav-menu-link fw-500">Signup/Login</Link></li>
-                <li><button className="nav-menu-link logout-btn fw-500" onClick={handleLogOut}>Log out</button></li>
+                {!currentUser && <li><Link to="/login" className="nav-menu-link fw-500">Signup/Login</Link></li>}
+                {currentUser && <li><button className="nav-menu-link logout-btn fw-500" onClick={handleLogOut}>Log out</button></li>}
                 {error}
               </ul>
             )}
