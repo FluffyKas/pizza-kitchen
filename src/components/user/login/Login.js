@@ -56,7 +56,10 @@ const Login = () => {
           <button disabled={loading} className="form-btn">Login</button>
         </fieldset>
       </form>
-      <p>Don't have an account? <Link to="/signup" className="signup-link">Sign up here</Link></p>
+      <div className="login-extra-options">
+        <p><Link to="/forgot-password" className="signup-link">Forgot your password?</Link></p>
+        <p>Don't have an account? <Link to="/signup" className="signup-link">Sign up here</Link></p>
+      </div>
     </div>
   );
 }
