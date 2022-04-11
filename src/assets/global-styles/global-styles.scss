@@ -165,3 +165,27 @@ textarea:focus-visible {
       font-size: 1.25rem;
     }
 }
+
+//Modal styles
+
+.backdrop {
+  opacity: .2;
+}
+
+.error-msg {
+  background: var(--error-msg-bg);
+  border: 2px solid red;
+  border-radius: 5px;
+  color: red;
+  padding: .75rem 1.25rem;
+  margin-bottom: 2rem;
+}
+
+.success-msg {
+  background: var(--success-msg-bg);
+  border: 2px solid green;
+  border-radius: 5px;
+  color: green;
+  padding: .75rem 1.25rem;
+  margin-bottom: 2rem;
+}
