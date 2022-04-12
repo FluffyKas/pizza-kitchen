@@ -1,4 +1,4 @@
-const textContainerVariants = {
+const ingredientContainerVariants = {
   hidden: {
     opacity: 0,
     x: -20
@@ -24,10 +24,10 @@ const pageAnimation = {
     }
   },
   exit: {
-    opacity: 1
+    opacity: 0
   }
 }
 
 
 
-export { textContainerVariants, pageAnimation }
+export { ingredientContainerVariants, pageAnimation }
