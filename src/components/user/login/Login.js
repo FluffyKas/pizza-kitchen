@@ -3,6 +3,8 @@ import { useState } from 'react';
 import { Link, useNavigate } from "react-router-dom";
 import { useAuth } from '../../../context/AuthContext'
 import { auth } from '../../../firebase'
+import { motion } from 'framer-motion';
+import { pageAnimation } from '../../../assets/animations/variants';
 
 const Login = () => {
   const [email, setEmail] = useState('');
@@ -27,7 +29,12 @@ const Login = () => {
   }
 
   return (
-    <div className="container signup">
+    <motion.div className="container signup"
+      variants={pageAnimation}
+      initial="hidden"
+      animate="visible"
+      exit="exit"
+    >
       <h1 className="form-title uppercase">Login</h1>
       <form onSubmit={handleSignin}>
         {error && <p className="error-msg">{error}</p>}
@@ -60,7 +67,7 @@ const Login = () => {
         <p><Link to="/forgot-password" className="signup-link">Forgot your password?</Link></p>
         <p>Don't have an account? <Link to="/signup" className="signup-link">Sign up here</Link></p>
       </div>
-    </div>
+    </motion.div>
   );
 }
 
