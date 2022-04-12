@@ -1,6 +1,8 @@
 import './ContactPage.scss';
 import { useState } from 'react';
 import { useNavigate } from "react-router-dom";
+import { motion } from 'framer-motion';
+import { pageAnimation } from '../../assets/animations/variants';
 import facebook from '../../assets/images/icon-facebook.svg';
 import twitter from '../../assets/images/icon-twitter.svg';
 import instagram from '../../assets/images/icon-instagram.svg';
@@ -21,7 +23,12 @@ const ContactPage = () => {
 
   return (
 
-    <>
+    <motion.div
+      variants={pageAnimation}
+      initial="hidden"
+      animate="visible"
+      exit="exit"
+    >
       <div className="contact-page container">
         <div className={`modal-bg ${message.submitted ? 'backdrop' : ''}`}>
           <h1 className="contact-page__title uppercase">Get in touch</h1>
@@ -119,7 +126,7 @@ const ContactPage = () => {
           </ul>
         </div>
       </footer>
-    </>
+    </motion.div>
   );
 }
 
