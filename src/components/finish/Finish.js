@@ -37,22 +37,22 @@ const Finish = ({ newPizza }) => {
           <motion.img src={pizza1} alt="" aria-hidden="true" className="delivery-illustration"
             initial={{ opacity: 0 }}
             animate={{ opacity: [0, 1, 0] }}
-            transition={{ delay: .5, duration: 2 }}
+            transition={{ delay: .5, duration: 3, repeat: Infinity, repeatType: "loop", repeatDelay: 4 }}
           />
           <motion.img src={pizza2} alt="" aria-hidden="true" className="delivery-illustration"
             initial={{ opacity: 0 }}
             animate={{ opacity: [0, 1, 0] }}
-            transition={{ delay: 1.5, duration: 2 }}
+            transition={{ delay: 2, duration: 2, repeat: Infinity, repeatType: "loop", repeatDelay: 5 }}
           />
           <motion.img src={pizza3} alt="" aria-hidden="true" className="delivery-illustration"
             initial={{ opacity: 0 }}
             animate={{ opacity: [0, 1, 0] }}
-            transition={{ delay: 2.5, duration: 2 }}
+            transition={{ delay: 3, duration: 2.5, repeat: Infinity, repeatType: "loop", repeatDelay: 4.5 }}
           />
           <motion.img src={pizza4} alt="" aria-hidden="true" className="delivery-illustration"
             initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: 3.5 }}
+            animate={{ opacity: [0, 1, 0] }}
+            transition={{ delay: 4.5, duration: 2, repeat: Infinity, repeatType: "loop", repeatDelay: 5 }}
           />
         </motion.div>
 
