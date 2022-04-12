@@ -135,6 +135,11 @@ textarea:focus-visible {
 
 //Form styles for base, ingredients, etc
 
+.choice-title {
+  font-size: 2rem;
+  padding-bottom: 1rem;
+}
+
 .choice-fieldset {
 
   .choice-input-container {
@@ -174,12 +179,12 @@ textarea:focus-visible {
 
     input:checked + label {
       color: var(--clr-accent);
-      font-size: 1.25rem;
+      font-size: 1.1rem;
     }
 
     input:checked + label::before {
       filter: invert(66%) sepia(34%) saturate(6865%) hue-rotate(348deg) brightness(98%) contrast(100%);
-      font-size: 1.25rem;
+      height: 1.1rem;
     }
 }
 
