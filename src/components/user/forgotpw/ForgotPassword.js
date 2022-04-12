@@ -3,6 +3,8 @@ import { useState } from 'react';
 import { Link } from "react-router-dom";
 import { useAuth } from '../../../context/AuthContext'
 import { auth } from '../../../firebase'
+import { motion } from 'framer-motion';
+import { pageAnimation } from '../../../assets/animations/variants';
 
 const ForgotPassword = () => {
   const [email, setEmail] = useState('');
@@ -27,7 +29,12 @@ const ForgotPassword = () => {
   }
 
   return (
-    <div className="container signup">
+    <motion.div className="container signup"
+      variants={pageAnimation}
+      initial="hidden"
+      animate="visible"
+      exit="exit"
+    >
       <h1 className="form-title uppercase">Password reset</h1>
       <form onSubmit={handleReset}>
         {error && <p className="error-msg">{error}</p>}
@@ -50,7 +57,7 @@ const ForgotPassword = () => {
       <div className="extra-options">
         <Link className="signup-link" to="/login">Back to login</Link>
       </div>
-    </div>
+    </motion.div>
   );
 }
 
