@@ -3,6 +3,8 @@ import { useState } from 'react'
 import { useAuth } from '../../../context/AuthContext'
 import { Link, useNavigate } from "react-router-dom"
 import { auth } from '../../../firebase'
+import { motion } from 'framer-motion';
+import { pageAnimation } from '../../../assets/animations/variants';
 
 const SignUp = () => {
 
@@ -33,7 +35,12 @@ const SignUp = () => {
   }
 
   return (
-    <div className="container signup">
+    <motion.div className="container signup"
+      variants={pageAnimation}
+      initial="hidden"
+      animate="visible"
+      exit="exit"
+    >
       <h1 className="form-title uppercase">Signup</h1>
       {error && <p className="error-msg">{error}</p>}
       <form onSubmit={handleSubmit}>
@@ -75,7 +82,7 @@ const SignUp = () => {
           <p>Already have an account? <Link to="/login" className="signup-link">Log in here</Link></p>
         </div>
       </form>
-    </div>
+    </motion.div>
   );
 }
 
