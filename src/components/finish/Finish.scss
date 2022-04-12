@@ -29,3 +29,15 @@
     color: var(--text-clr);
   }
 }
+
+.pizza-img-holder {
+  position: relative;
+  height: 120px;
+
+  img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
