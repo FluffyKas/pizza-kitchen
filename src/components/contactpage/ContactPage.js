@@ -23,14 +23,13 @@ const ContactPage = () => {
 
   return (
 
-    <motion.div
-      variants={pageAnimation}
-      initial="hidden"
-      animate="visible"
-      exit="exit"
-    >
+    <div>
       <div className="contact-page container">
-        <div className={`modal-bg ${message.submitted ? 'backdrop' : ''}`}>
+        <motion.div className={`modal-bg ${message.submitted ? 'backdrop' : ''}`}
+          variants={pageAnimation}
+          initial="hidden"
+          animate="visible"
+        >
           <h1 className="contact-page__title uppercase">Get in touch</h1>
           <p className="contact-page__description">Have a question or feedback? We would love to hear from you!</p>
           <form onSubmit={submitMessage}>
@@ -83,7 +82,7 @@ const ContactPage = () => {
               <button className="form-btn">Send</button>
             </fieldset>
           </form>
-        </div>
+        </motion.div>
 
         {message.submitted && <div className="modal text-center">
           <h2>Thank you, {message.name} !</h2>
@@ -126,7 +125,7 @@ const ContactPage = () => {
           </ul>
         </div>
       </footer>
-    </motion.div>
+    </div>
   );
 }
 
