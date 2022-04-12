@@ -18,7 +18,10 @@ const pageAnimation = {
     opacity: 0
   },
   visible: {
-    opacity: 1
+    opacity: 1,
+    transition: {
+      when: "beforeChildren"
+    }
   },
   exit: {
     opacity: 1
