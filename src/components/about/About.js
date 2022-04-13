@@ -11,7 +11,11 @@ const About = () => {
       animate="visible"
       exit="exit"
     >
-      <div className="about-text-box">
+      <motion.div className="about-text-box"
+        initial={{ opacity: 0, x: -20 }}
+        animate={{ opacity: 1, x: 0 }}
+        transition={{ duration: .5, ease: "easeIn" }}
+      >
         <div className="about-us">
           <h1 className="about-title">About Us</h1>
           <p className="about-text">Image evening evening. Given she'd dominion herb You'll them. Given whose, above. Place waters. Of give it winged above blessed every replenish multiply won't saying tree saying waters replenish. Tree give upon without them yielding him green. Image.</p>
@@ -22,8 +26,12 @@ const About = () => {
           <p className="about-text">Greater for days morning seasons you unto first. Seed spirit multiply air cattle beginning let, open blessed. Own midst divide be blessed him over green him.</p>
           <p className="about-text">Own in. Won't. Very spirit. Without forth Forth saw replenish image. And creature. Likeness, dominion female dominion she'd. Appear years dry us bring she'd together. Living fruit.</p>
         </div>
-      </div>
-      <img src={aboutUsImg} className="about-img" alt="An oven-baked pizza with pesto, rocket and buffalo mozzarella." />
+      </motion.div>
+      <motion.img src={aboutUsImg} className="about-img" alt="An oven-baked pizza with pesto, rocket and buffalo mozzarella."
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: .5, ease: "easeIn" }}
+      />
     </motion.div>
   );
 }
