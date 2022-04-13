@@ -6,7 +6,8 @@ import sunIcon from '../../assets/images/icon-sun.svg';
 import moonIcon from '../../assets/images/icon-moon.svg';
 import { Link } from "react-router-dom";
 import { useEffect, useState } from 'react';
-import { useAuth } from '../../context/AuthContext'
+import { useAuth } from '../../context/AuthContext';
+import { motion } from 'framer-motion';
 
 const Header = ({ theme, setTheme }) => {
 
@@ -51,7 +52,11 @@ const Header = ({ theme, setTheme }) => {
   }, []);
 
   return (
-    <header>
+    <motion.header
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ duration: .35, ease: "easeIn" }}
+    >
       <div className="header-inner-wrapper">
 
         <Link to="/" className="logo-container" aria-label="Pizza Kitchen">
@@ -95,7 +100,7 @@ const Header = ({ theme, setTheme }) => {
         </div>
 
       </div>
-    </header>
+    </motion.header>
   );
 }
 
