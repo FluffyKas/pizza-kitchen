@@ -5,12 +5,13 @@ import closeBtn from '../../assets/images/icon-close.svg';
 import sunIcon from '../../assets/images/icon-sun.svg';
 import moonIcon from '../../assets/images/icon-moon.svg';
 import { Link } from "react-router-dom";
-import { useEffect, useState } from 'react';
+import { useEffect, useState, useRef } from 'react';
 import { useAuth } from '../../context/AuthContext';
 import { motion } from 'framer-motion';
 
 const Header = ({ theme, setTheme }) => {
 
+  //Logout
   const { currentUser, logout } = useAuth()
   const [error, setError] = useState('');
 
@@ -51,6 +52,24 @@ const Header = ({ theme, setTheme }) => {
 
   }, []);
 
+  //Closing mobile menu when clicking outside of it
+
+  let menuRef = useRef();
+
+  useEffect(() => {
+    let handler = (e) => {
+      if (!menuRef.current.contains(e.target)) {
+        setIsOpened(false);
+      }
+    }
+
+    document.addEventListener("mousedown", handler)
+
+    return () => {
+      document.removeEventListener("mosuedown", handler)
+    }
+  });
+
   return (
     <motion.header
       initial={{ opacity: 0 }}
@@ -61,10 +80,10 @@ const Header = ({ theme, setTheme }) => {
 
         <Link to="/" className="logo-container" aria-label="Pizza Kitchen">
           <img src={logo} alt="" aria-hidden="true" className="logo-img" />
-          <span>Pizza Kitchen</span>
+          {screenWidth > 375 && <span>Pizza Kitchen</span>}
         </Link>
 
-        <div className="header-left">
+        <div className="header-left" ref={menuRef}>
           <nav>
 
             <button className="hamburger-btn" aria-expanded={isOpened ? "true" : "false"} aria-controls="nav-menu" onClick={toggleMenu}>
@@ -76,7 +95,7 @@ const Header = ({ theme, setTheme }) => {
               <span className="sr-only">Menu</span>
             </button>
 
-            {(isOpened || screenWidth > 640) && (
+            {(isOpened || screenWidth > 960) && (
               <ul id="nav-menu" className="nav-menu uppercase">
                 <li><Link to="/contact" className="nav-menu-link fw-500">Contact</Link></li>
                 <li><Link to="about" className="nav-menu-link fw-500">About Us</Link></li>
