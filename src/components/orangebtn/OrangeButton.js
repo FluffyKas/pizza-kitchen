@@ -5,8 +5,8 @@ import { motion } from 'framer-motion';
 const OrangeButton = ({ nextPage, text }) => {
   return (
     <motion.div
-      initial={{ x: "-20%" }}
-      animate={{ x: 0 }}
+      whileHover={{ scale: 1.05 }}
+      whileTap={{ scale: 1.05 }}
     >
       <Link to={nextPage} className="orange-button">{text}</Link>
     </motion.div>
