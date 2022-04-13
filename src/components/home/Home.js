@@ -19,7 +19,7 @@ const Home = ({ newPizza, setNewPizza }) => {
       <motion.div className="container"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
-        transition={{ delay: .5, duration: .75 }}
+        transition={{ delay: .35, duration: .5 }}
       >
         <h1 className="home__title">Welcome to Pizza Kitchen</h1>
         <OrangeButton nextPage={"/base"} text={"Create your pizza"} onClick={resetPizza} />
