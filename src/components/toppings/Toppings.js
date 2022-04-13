@@ -38,7 +38,10 @@ const Toppings = ({ newPizza, setNewPizza }) => {
             )
           })}
           {newPizza.toppings.length >= 3 ?
-            <OrangeButton nextPage={"/finish"} text={"Finish your order"} /> :
+            <motion.div
+              initial={{ x: -200 }}
+              animate={{ x: 0 }}
+            ><OrangeButton nextPage={"/finish"} text={"Finish your order"} /></motion.div> :
             <p className="toppings-alert">At least 3 toppings must be selected</p>}
         </fieldset>
       </form>

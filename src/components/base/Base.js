@@ -22,8 +22,8 @@ const Base = ({ setNewPizza, newPizza }) => {
       initial="hidden"
       animate="visible"
     >
-      <h1 className="choice-title fw-700">Choose your pizza base:</h1>
-      <form>
+      <motion.h1 className="choice-title fw-700">Choose your pizza base:</motion.h1>
+      <motion.form>
         <fieldset className="choice-fieldset">
           <legend className="sr-only">Available pizza bases</legend>
           {bases.map((base, index) => {
@@ -37,9 +37,14 @@ const Base = ({ setNewPizza, newPizza }) => {
               </motion.div>
             )
           })}
-          {newPizza.base && <OrangeButton nextPage={"/toppings"} text={"Next: Toppings"} />}
+          {newPizza.base && <motion.div
+            initial={{ x: -200 }}
+            animate={{ x: 0 }}
+          >
+            <OrangeButton nextPage={"/toppings"} text={"Next: Toppings"} />
+          </motion.div>}
         </fieldset>
-      </form>
+      </motion.form>
     </motion.div>
   );
 }
