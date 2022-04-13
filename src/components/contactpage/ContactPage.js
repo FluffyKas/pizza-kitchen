@@ -79,7 +79,7 @@ const ContactPage = () => {
                 </textarea>
                 <label htmlFor="message">Message:</label>
               </div>
-              <button className="form-btn">Send</button>
+              <button className="contact-form-btn form-btn">Send</button>
             </fieldset>
           </form>
         </motion.div>

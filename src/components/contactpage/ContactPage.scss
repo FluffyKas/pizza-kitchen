@@ -106,3 +106,9 @@ footer {
     transform: scale(1.15);
   }
 }
+
+.contact-form-btn {
+  @media(min-width: 40rem) {
+    margin: 0;
+  }
+}
