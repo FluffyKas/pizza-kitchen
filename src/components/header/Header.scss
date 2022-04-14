@@ -34,6 +34,24 @@ header {
   }
 }
 
+.logo-container:focus,
+.nav-menu-link:focus,
+.theme-toggle:focus {
+  outline: 3px dashed var(--clr-accent);
+}
+
+.logo-container:focus:not(:focus-visible),
+.nav-menu-link:focus:not(:focus-visible),
+.theme-toggle:focus:not(:focus-visible) {
+  outline: none;
+}
+
+.logo-container:focus-visible,
+.nav-menu-link:focus-visible,
+.theme-toggle:focus-visible {
+  outline: 3px dashed var(--clr-accent);
+}
+
 .logo-img {
   width: 50px; 
   filter: var(--logo-filter);
@@ -42,10 +60,6 @@ header {
 
 .logo-container:hover {
   color: var(--clr-accent);
-
-  .logo-img {
-    filter: invert(66%) sepia(34%) saturate(6865%) hue-rotate(348deg) brightness(98%) contrast(100%);
-  }
 }
 
 //Left side/nav
