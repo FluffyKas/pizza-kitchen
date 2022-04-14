@@ -47,3 +47,15 @@
     color: var(--text-color);
   }
 }
+
+.home-link:focus {
+  outline: 3px dashed var(--clr-accent);
+}
+
+.home-link:focus:not(:focus-visible) {
+  outline: none;
+}
+
+.home-link:focus-visible {
+  outline: 3px dashed var(--clr-accent);
+}
