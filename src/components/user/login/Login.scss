@@ -8,3 +8,20 @@
 .signup-link:hover {
   color: var(--text-clr);
 }
+
+.signup-link:focus {
+  /* Provide a fallback style for browsers
+     that don't support :focus-visible */
+  outline: 3px dashed var(clr-accent);
+}
+
+.signup-link:not(:focus-visible) {
+  /* Remove the focus indicator on mouse-focus for browsers
+     that do s  upport :focus-visible */
+  outline: none;
+}
+
+.signup-link:focus-visible {
+  /* for browsers that do support :focus-visible */
+  outline: 3px dashed var(--clr-accent);
+}
