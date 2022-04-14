@@ -95,7 +95,6 @@ textarea:focus-visible {
   margin: 0 auto;
   margin-top: .5rem;
   @media(min-width: 38rem) {
-    // margin: 0;
     margin-top: .5rem;
     padding: .5rem 2.5rem;
   }
@@ -143,7 +142,13 @@ textarea:focus-visible {
 .choice-fieldset {
 
   .choice-input-container {
-    padding-bottom: .75rem;
+    outline: none;
+    width:fit-content;
+    margin: .75rem;
+  }
+
+  .choice-input-container input:active .choice-input-container {
+    outline: none;
   }
 
     input {
@@ -163,6 +168,10 @@ textarea:focus-visible {
           filter: invert(66%) sepia(34%) saturate(6865%) hue-rotate(348deg) brightness(98%) contrast(100%);
         }
       }
+    }
+
+    .choice-input-container:focus-within {
+      outline: 3px dashed var(--clr-accent);
     }
   
     label::before {
