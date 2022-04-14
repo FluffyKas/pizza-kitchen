@@ -113,3 +113,7 @@
     }
   }
 }
+
+.focus-box:focus-within {
+  outline: 3px dashed var(--clr-accent);
+}
