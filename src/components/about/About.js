@@ -14,7 +14,7 @@ const About = () => {
       <motion.div className="about-text-box"
         initial={{ opacity: 0, x: -20 }}
         animate={{ opacity: 1, x: 0 }}
-        transition={{ duration: .5, ease: "easeIn" }}
+        transition={{ delay: .35, duration: .75, ease: "easeIn" }}
       >
         <div className="about-us">
           <h1 className="about-title">About Us</h1>
