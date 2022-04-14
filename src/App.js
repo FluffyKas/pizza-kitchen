@@ -36,7 +36,7 @@ function App() {
               <Route path="/" element={<Home newPizza={newPizza} setNewPizza={setNewPizza} />} />
               <Route path="/base" element={<Base newPizza={newPizza} setNewPizza={setNewPizza} />} />
               <Route path="/toppings" element={<Toppings newPizza={newPizza} setNewPizza={setNewPizza} />} />
-              <Route path="/finish" element={<Finish newPizza={newPizza} />} />
+              <Route path="/finish" element={<Finish newPizza={newPizza} theme={theme} />} />
               <Route path="/contact" element={<ContactPage />} />
               <Route path="/about" element={<About />} />
               <Route path="/login" element={<Login />} />
