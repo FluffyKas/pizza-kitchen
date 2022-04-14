@@ -110,16 +110,16 @@ const ContactPage = () => {
             </div>
           </div>
           <ul className="social-media">
-            <li><a href="https://www.facebook.com/" aria-label="Facebook">
+            <li><a href="https://www.facebook.com/" aria-label="Facebook" className="social-media-link">
               <img src={facebook} alt="" aria-hidden="true" />
             </a></li>
-            <li><a href="https://twitter.com/" aria-label="Twitter">
+            <li><a href="https://twitter.com/" aria-label="Twitter" className="social-media-link">
               <img src={twitter} alt="" aria-hidden="true" />
             </a></li>
-            <li><a href="https://www.instagram.com" aria-label="Instagram">
+            <li><a href="https://www.instagram.com" aria-label="Instagram" className="social-media-link">
               <img src={instagram} alt="" aria-hidden="true" />
             </a></li>
-            <li><a href="https://www.pinterest.com/instagram" aria-label="Pinterest">
+            <li><a href="https://www.pinterest.com/instagram" aria-label="Pinterest" className="social-media-link">
               <img src={pinterest} alt="" aria-hidden="true" />
             </a></li>
           </ul>

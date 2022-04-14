@@ -107,6 +107,18 @@ footer {
   }
 }
 
+.social-media-link:focus {
+  outline: 3px dashed red;
+}
+
+.social-media-link:focus:not(:focus-visible) {
+  outline: none;
+}
+
+.social-media-link:focus-visible {
+  outline: 3px dashed red;
+}
+
 .contact-form-btn {
   @media(min-width: 40rem) {
     margin: 0;
