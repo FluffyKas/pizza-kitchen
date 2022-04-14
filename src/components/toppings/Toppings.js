@@ -24,13 +24,17 @@ const Toppings = ({ newPizza, setNewPizza }) => {
       animate="visible"
     >
       <h1 className="choice-title fw-700">Choose your Toppings:</h1>
-      <form>
+      <motion.form
+        initial={{ x: 20, opacity: 0 }}
+        animate={{ x: 0, opacity: 1 }}
+        transition={{ delay: .5, duration: .5 }}
+      >
         <fieldset className="choice-fieldset">
           {toppings.map((topping, index) => {
             return (
               <motion.div key={index} className="choice-input-container fw-500"
                 whileHover={{ scale: 1.15, originX: 0 }}
-                transition={{ type: "spring", stiffness: 200 }}
+                transition={{ type: "spring", stiffness: 250, damping: 15 }}
               >
                 <input type="checkbox" id={topping} value={topping} name={topping} onChange={addToppings} />
                 <label htmlFor={topping}>{topping}</label>
@@ -39,12 +43,12 @@ const Toppings = ({ newPizza, setNewPizza }) => {
           })}
           {newPizza.toppings.length >= 3 ?
             <motion.div
-              initial={{ x: -200 }}
+              initial={{ x: 200 }}
               animate={{ x: 0 }}
             ><OrangeButton nextPage={"/finish"} text={"Finish your order"} /></motion.div> :
             <p className="toppings-alert">At least 3 toppings must be selected</p>}
         </fieldset>
-      </form>
+      </motion.form>
     </motion.div>
   );
 }
