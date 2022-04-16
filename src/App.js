@@ -33,7 +33,7 @@ function App() {
         <AnimatePresence>
           <main>
             <Routes location={location} key={location.pathname}>
-              <Route path="/" element={<Home newPizza={newPizza} setNewPizza={setNewPizza} />} />
+              <Route path="/" element={<Home setNewPizza={setNewPizza} />} />
               <Route path="/base" element={<Base newPizza={newPizza} setNewPizza={setNewPizza} />} />
               <Route path="/toppings" element={<Toppings newPizza={newPizza} setNewPizza={setNewPizza} />} />
               <Route path="/finish" element={<Finish newPizza={newPizza} theme={theme} />} />
