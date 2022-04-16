@@ -103,4 +103,5 @@ There are a few things I'd like to learn more about next:
 
 ## Acknowledgments
 
-I got the arrow icon (probably there will be more) on Flaticon so I'll leave the attribution [here](https://www.flaticon.com/free-icons/arrow): made by rang - Flaticon
+I got the arrow icon on Flaticon so I'll leave the attribution [here](https://www.flaticon.com/free-icons/arrow): made by rang - Flaticon
+All the other pictures (bg image, pizza loader) were made by my sister
