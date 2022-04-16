@@ -2,7 +2,7 @@
 
 This is a solution to the [Interactive rating component challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/interactive-rating-component-koxpeBUmI). Frontend Mentor challenges help you improve your coding skills by building realistic projects.
 
-I actually expanded upon it a bit. You could say this is a completely different project >.< I hope whoever designed the challenge will forgive me.
+I actually expanded upon it a bit. You could say this is a completely different project >.<
 
 ## Table of contents
 
@@ -29,6 +29,18 @@ Users should be able to:
 - Select and submit a number rating
 - See the "Thank you" card state after submitting a rating
 
+The extra bits I added:
+
+- multiple pages, routing
+- turned it into an super simple pizza app
+- create-your-pizza function
+- pizza-loader while user is waiting for the delivery
+- contact form
+- signup/login function with Firebase
+- password reset function with Firebase
+- light/dark theme
+- turned rating card into a modal
+
 ### Screenshot
 
 ![](./screenshot.jpg)
@@ -39,15 +51,9 @@ Users should be able to:
 
 ## My process
 
-<!-- This project started out as a newbie level Frontend Mentor challenge. I wanted to practice React and a small component such as this one felt like a commitment I can make >.< By the end of it, I felt bad though because I didn't feel like I learned anything so I decided to add a few bits.
+The original component was pretty simple. Once it was done I decided to create a simple pizza app out of it (even though I had to change the wording of the actual challenge >.<). I was having a lot of fun with this so I kept adding new stuff. The design isn't the fanciest as I'm not a professional, nor was that the point here. I wanted to practice a couple of things instead: React, Firebase and animations.
 
-First, a pizza-creation function. Then a Contact form to practice form handling. At this point, I had to add routing as well. And then I enjoyed forms so much (and the CSS I came up with for it >.<) that I wanted to use it elsewhere. So I added login and signup option. For this I had to look up authentication and Firebase, as I knew nothing about these things. Then I reused my dark/light theme toggle from a previous project and implemented it here with this project colours. Then I decided it would make the most sense, if the actual rating card / thank you card components were transformed into modals only.
-
-So yes. The original idea ended up being some tiny popup in a somewhat bigger website.
-
-Disclaimer: I'm not a designer, nor am I aiming to be very good at it right now. This is just some pet project to practice React. And I'm sorry if it hurts the eyes >.< -->
-
-In Progress
+I don't want to pretend I reinvented the wheel here, I used a bunch of resources (most of the articles, videos and other stuff are listed below) to complete this, as most of the these things were pretty new / completely new to me but I learned heaps.
 
 ### Built with
 
@@ -63,26 +69,33 @@ In Progress
 
 ### What I learned
 
-<!-- - Framer Motion
-- context
-- useState vs useRef
+- Framer Motion: I'm still not comfortable with this but I feel like I'm getting somewhat better. I learned how to animate routes which honestly makes so much difference ( I opted for a really subtle fade in).
+- React context: Only used it for the authentication, and purely for the sake of trying it out. Probably could've gotten away without it. As cool as it is, it's something I'm probably going to use pretty sparingly in the future. It's on overkill for most purposes and it affects component reusability badly I reckon (I may be wrong and I may review this thought later but for now this is the way it seems to me).
+- useState, useRef
 - input handling
-- routing, useNavigate()
-- Firebase
-- modals with react - surprisingly easy
-  (will add more once the version 1 of this project is done) -->
+- routing
+- Firebase authentication (looked into storage as well but not implemented yet, may do in the future though if I decide to add more things to the app)
 
 ### Continued development
 
+There are a few things I'd like to learn more about next:
+
+- Framer Motion: need to learn how to do exit animations
+- How to better handle images so they don't affect performance as much
+- React custom hooks
+- Firebase storage: would be nice to use in a small sideproject
+
 ### Useful resources
 
-- [Firebase Course](https://www.youtube.com/watch?v=9zdvmgGsww0) - A great little Firebase course from Net Ninja
+- [Firebase Course](https://www.youtube.com/watch?v=9zdvmgGsww0) - great Firebase course from Net Ninja
+- [Setting up Firebase auth](https://www.youtube.com/watch?v=PKwu15ldZ7k) - it's a bit dated but a good starting point that works fine with some modifications
 - [Input animation](https://www.youtube.com/watch?v=v8mRUU3orjI) - A video on how to animate the input label with CSS only
 - [useLocalStorage React hook](https://www.npmjs.com/package/use-local-storage) - A hook that simplifies using LocalStorage
 - [Easy Dark Mode Setup in React](https://css-tricks.com/easy-dark-mode-and-multiple-color-themes-in-react/) - Using the above mentioned LocalStorage hook
-- [Handy filter for changing the color of svgs](https://codepen.io/sosuke/pen/Pjoqqp) - and the [stackoverflow thread](https://stackoverflow.com/questions/22252472/how-to-change-the-color-of-an-svg-element) where I found it
 - [React docs on uncontrolled components and useRef](https://reactjs.org/docs/uncontrolled-components.html)
 - [Article on controlled vs uncontrolled components](https://goshacmd.com/controlled-vs-uncontrolled-inputs-react/)
+- [Page transition effects with Framer Motion](https://www.youtube.com/watch?v=FdrEjwymzdY)
+- [Click outside to close mobile menu in React](https://www.youtube.com/watch?v=eWO1b6EoCnQ)
 
 ## Author
 
