@@ -2,7 +2,7 @@ import './ContactPage.scss';
 import { useState } from 'react';
 import { useNavigate } from "react-router-dom";
 import { motion } from 'framer-motion';
-import { pageAnimation } from '../../assets/animations/variants';
+import { pageAnimation, modalVariants } from '../../assets/animations/variants';
 import facebook from '../../assets/images/icon-facebook.svg';
 import twitter from '../../assets/images/icon-twitter.svg';
 import instagram from '../../assets/images/icon-instagram.svg';
@@ -84,11 +84,15 @@ const ContactPage = () => {
           </form>
         </motion.div>
 
-        {message.submitted && <div className="modal text-center">
+        {message.submitted && <motion.div className="modal text-center"
+          variants={modalVariants}
+          initial="hidden"
+          animate="visible"
+        >
           <h2>Thank you, {message.name} !</h2>
-          <p>We've received your message and will get back to you as soon as possible!</p>
+          <p className="contact-text">We've received your message and will get back to you as soon as possible!</p>
           <p className="redirect-message">Redirecting to Home...</p>
-        </div>}
+        </motion.div>}
       </div>
 
       <footer>

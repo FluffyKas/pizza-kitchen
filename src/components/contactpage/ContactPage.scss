@@ -3,7 +3,7 @@
 .contact-page {
   max-width: 90%;
   margin: 0 auto;
-  padding-top: 7.6rem;
+  padding-top: 9.3rem;
   text-align: center;
   @media(min-width: 38rem) {
     text-align: left;
@@ -22,33 +22,38 @@
 //MODAL
 
 .modal {
-  background: white;
-  border: 3px dashed var(--text-clr);
-  border-radius: 5px;
+  background: var(--modal-bg);
+  width: 90%;
+  border-radius: 15px;
   color: var(--clr-neutral-blue-900);
   padding: 2rem;
-  width: 90%;
-  max-width: 28rem;
+  max-width: 24rem;
+  padding: clamp(1.5rem,2vw,2rem);
+  letter-spacing: 0;
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   z-index: 2000;
+  border: 2px dashed var(--clr-accent);
 
   h2 {
-    padding-bottom: 1rem;
+    color: var(--text-clr);
+    font-size: 1.5rem;
+    margin-block: 1rem .75rem;
   }
 }
 
-.backdrop {
-  opacity: .2;
+.contact-text {
+  color: var(--clr-neutral-grey-200);
+  font-size: .9rem;
 }
 
 .redirect-message {
+  color: var(--clr-neutral-grey-200);
   font-style: italic;
   padding-top: 2.75rem;
   font-size: .9rem;
-  opacity: .6;
 }
 
 //FOOTER
