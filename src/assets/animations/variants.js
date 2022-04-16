@@ -25,6 +25,17 @@ const pageAnimation = {
   }
 }
 
+const modalVariants = {
+  hidden: {
+    y: "-100%",
+    x: "-50%",
+    opacity: 0
+  },
+  visible: {
+    y: "-50%",
+    x: "-50%",
+    opacity: 1
+  }
+}
 
-
-export { ingredientContainerVariants, pageAnimation }
+export { ingredientContainerVariants, pageAnimation, modalVariants }
