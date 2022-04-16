@@ -2,12 +2,14 @@ import { Link } from "react-router-dom";
 import thankyou from '../../assets/images/illustration-thank-you.svg';
 import './ThankYouCard.scss';
 import { motion } from 'framer-motion';
+import { modalVariants } from '../../assets/animations/variants';
 
 const ThankYouCard = ({ activeRating }) => {
   return (
     <motion.div className="container thank-you-card"
-      initial={{ y: "-50%", x: "-100%", opacity: 0 }}
-      animate={{ y: "-50%", x: "-50%", opacity: 1 }}
+      variants={modalVariants}
+      initial="hidden"
+      animate="visible"
     >
       <img src={thankyou} alt="" aria-hidden="true" />
       <p className="final-rating">You selected {activeRating} out of 5</p>
