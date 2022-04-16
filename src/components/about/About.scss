@@ -47,5 +47,9 @@
 }
 
 .about-img {
-  max-width: 630px;
+  max-width: 600px;
+  padding-bottom: 1rem;
+  @media (min-width: 80rem) {
+    padding-bottom: 0;
+  }
 }
