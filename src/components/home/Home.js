@@ -4,13 +4,13 @@ import { motion } from 'framer-motion';
 import { pageAnimation } from '../../assets/animations/variants';
 import { useEffect } from 'react';
 
-const Home = ({ newPizza, setNewPizza }) => {
+const Home = ({ setNewPizza }) => {
 
   useEffect(() => {
 
     setNewPizza({ base: '', toppings: [] })
 
-  }, [])
+  }, []);
 
 
   return (
@@ -18,7 +18,6 @@ const Home = ({ newPizza, setNewPizza }) => {
       variants={pageAnimation}
       initial="hidden"
       animate="visible"
-      exit="exit"
     >
       <motion.div className="container"
         initial={{ opacity: 0 }}
