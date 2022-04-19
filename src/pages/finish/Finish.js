@@ -13,11 +13,12 @@ import { RatingCard } from "../../components";
 import "./Finish.scss";
 import { motion } from "framer-motion";
 import { pageAnimation } from "../../assets/animations/variants";
-import { usePizza } from "../../context";
+import { usePizza, useTheme } from "../../context";
 
-export const Finish = ({ theme }) => {
+export const Finish = () => {
   const [activeModal, setActiveModal] = useState(false);
-  const { setNewPizza, newPizza } = usePizza();
+  const { newPizza } = usePizza();
+  const { theme } = useTheme();
 
   const toggleModal = () => {
     setActiveModal(true);

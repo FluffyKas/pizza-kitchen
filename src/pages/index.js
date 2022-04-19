@@ -7,3 +7,4 @@ export { ForgotPassword } from "./forgotpw/ForgotPassword";
 export { Login } from "./login/Login";
 export { SignUp } from "./signup/Signup";
 export { Toppings } from "./toppings/Toppings";
+export { AppRoutes } from "./AppRoutes";

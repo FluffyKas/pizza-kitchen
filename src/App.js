@@ -1,49 +1,27 @@
 import "./assets/global-styles/global-styles.scss";
 import "./assets/global-styles/utilities.scss";
 import { Routes, Route, useLocation } from "react-router-dom";
-import { useState } from "react";
-import useLocalStorage from "use-local-storage";
-import { AuthProvider, PizzaProvider } from "./context";
+import { AuthProvider, PizzaProvider, useTheme } from "./context";
 import { AnimatePresence } from "framer-motion";
-import {
-  Home,
-  About,
-  Base,
-  ContactPage,
-  Finish,
-  ForgotPassword,
-  Login,
-  SignUp,
-  Toppings,
-} from "./pages";
+import { AppRoutes } from "./pages";
 import { Header } from "./components";
 
 function App() {
   const location = useLocation();
-
-  const defaultDark = window.matchMedia("(perfers-color-scheme: dark)").matches;
-  const [theme, setTheme] = useLocalStorage(
-    "theme",
-    defaultDark ? "dark" : "light"
-  );
+  const { theme } = useTheme();
 
   return (
     <div className="App" data-theme={theme}>
       <AuthProvider>
         <PizzaProvider>
-          <Header theme={theme} setTheme={setTheme} />
+          <Header />
           <AnimatePresence>
             <main>
               <Routes location={location} key={location.pathname}>
-                <Route path="/" element={<Home />} />
-                <Route path="/base" element={<Base />} />
-                <Route path="/toppings" element={<Toppings />} />
-                <Route path="/finish" element={<Finish theme={theme} />} />
-                <Route path="/contact" element={<ContactPage />} />
-                <Route path="/about" element={<About />} />
-                <Route path="/login" element={<Login />} />
-                <Route path="/forgot-password" element={<ForgotPassword />} />
-                <Route path="/signup" element={<SignUp />} />
+                {AppRoutes.map((route, index) => {
+                  const { path, element } = route;
+                  return <Route path={path} element={element} />;
+                })}
               </Routes>
             </main>
           </AnimatePresence>

@@ -8,8 +8,10 @@ import { Link } from "react-router-dom";
 import { useEffect, useState, useRef } from "react";
 import { useAuth } from "../../context/AuthContext";
 import { motion } from "framer-motion";
+import { useTheme } from "../../context";
 
-export const Header = ({ theme, setTheme }) => {
+export const Header = () => {
+  const { theme, setTheme } = useTheme();
   //Logout
   const { currentUser, logout } = useAuth();
   const [error, setError] = useState("");
