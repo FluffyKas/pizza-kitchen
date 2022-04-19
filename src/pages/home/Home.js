@@ -3,8 +3,11 @@ import { OrangeButton } from "../../components";
 import { motion } from "framer-motion";
 import { pageAnimation } from "../../assets/animations/variants";
 import { useEffect } from "react";
+import { usePizza } from "../../context";
 
-export const Home = ({ setNewPizza }) => {
+export const Home = () => {
+  const { setNewPizza } = usePizza();
+
   useEffect(() => {
     setNewPizza({ base: "", toppings: [] });
   }, []);

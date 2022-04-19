@@ -2,9 +2,11 @@ import "./Base.scss";
 import { OrangeButton } from "../../components";
 import { motion } from "framer-motion";
 import { ingredientContainerVariants } from "../../assets/animations/variants";
+import { usePizza } from "../../context";
 
-export const Base = ({ setNewPizza, newPizza }) => {
+export const Base = () => {
   const bases = ["classic", "thin", "stuffed", "chicago-style"];
+  const { setNewPizza, newPizza } = usePizza();
 
   const addBase = (e) => {
     setNewPizza({

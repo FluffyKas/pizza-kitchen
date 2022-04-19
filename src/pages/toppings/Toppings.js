@@ -2,8 +2,9 @@ import { OrangeButton } from "../../components";
 import "./Toppings.scss";
 import { motion } from "framer-motion";
 import { ingredientContainerVariants } from "../../assets/animations/variants";
+import { usePizza } from "../../context";
 
-export const Toppings = ({ newPizza, setNewPizza }) => {
+export const Toppings = () => {
   const toppings = [
     "extra cheese",
     "pepperoni",
@@ -20,6 +21,8 @@ export const Toppings = ({ newPizza, setNewPizza }) => {
     "baby spinach",
     "rocket",
   ];
+
+  const { newPizza, setNewPizza } = usePizza();
 
   const addToppings = (e) => {
     let chosenToppings;
