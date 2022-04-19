@@ -1,0 +1,2 @@
+- Create pages folder four route components
+- Create index.js and export your components from there

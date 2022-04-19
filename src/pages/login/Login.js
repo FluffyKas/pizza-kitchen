@@ -1,35 +1,36 @@
-import './Login.scss';
-import { useState } from 'react';
+import "./Login.scss";
+import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
-import { useAuth } from '../../../context/AuthContext'
-import { auth } from '../../../firebase'
-import { motion } from 'framer-motion';
-import { pageAnimation } from '../../../assets/animations/variants';
+import { useAuth } from "../../context/AuthContext";
+import { auth } from "../../firebase";
+import { motion } from "framer-motion";
+import { pageAnimation } from "../../assets/animations/variants";
 
-const Login = () => {
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
-  const [error, setError] = useState('');
+export const Login = () => {
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [error, setError] = useState("");
   const [loading, setLoading] = useState(false);
-  const { login } = useAuth()
+  const { login } = useAuth();
   const navigate = useNavigate();
 
   async function handleSignin(e) {
     e.preventDefault();
 
     try {
-      setError('')
-      setLoading(true)
-      await login(auth, email, password)
-      navigate('/');
+      setError("");
+      setLoading(true);
+      await login(auth, email, password);
+      navigate("/");
     } catch {
-      setError('Incorrect email or password')
+      setError("Incorrect email or password");
     }
-    setLoading(false)
+    setLoading(false);
   }
 
   return (
-    <motion.div className="container signup"
+    <motion.div
+      className="container signup"
       variants={pageAnimation}
       initial="hidden"
       animate="visible"
@@ -47,7 +48,8 @@ const Login = () => {
               placeholder=" "
               autoComplete="off"
               onChange={(e) => setEmail(e.target.value)}
-              required />
+              required
+            />
             <label htmlFor="email">Email:</label>
           </div>
           <div className="input-wrapper">
@@ -57,18 +59,28 @@ const Login = () => {
               placeholder=" "
               autoComplete="off"
               onChange={(e) => setPassword(e.target.value)}
-              required />
+              required
+            />
             <label htmlFor="password">Password:</label>
           </div>
-          <button disabled={loading} className="form-btn">Login</button>
+          <button disabled={loading} className="form-btn">
+            Login
+          </button>
         </fieldset>
       </form>
       <div className="extra-options">
-        <p><Link to="/forgot-password" className="signup-link">Forgot your password?</Link></p>
-        <p>Don't have an account? <Link to="/signup" className="signup-link">Sign up here</Link></p>
+        <p>
+          <Link to="/forgot-password" className="signup-link">
+            Forgot your password?
+          </Link>
+        </p>
+        <p>
+          Don't have an account?{" "}
+          <Link to="/signup" className="signup-link">
+            Sign up here
+          </Link>
+        </p>
       </div>
     </motion.div>
   );
-}
-
-export default Login;
+};

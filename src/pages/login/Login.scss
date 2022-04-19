@@ -1,8 +1,8 @@
-@use '../../../assets/global-styles/variables.scss' as *;
+@use "../../assets/global-styles/variables.scss" as *;
 
 .signup-link {
   color: var(--clr-accent);
-  transition: color .2s ease-in;
+  transition: color 0.2s ease-in;
 }
 
 .signup-link:hover {
