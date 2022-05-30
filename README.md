@@ -48,7 +48,7 @@ The extra bits I added:
 
 ### Links
 
-[Live site](https://pizza-kitchen.netlify.app/)
+-Live site: [Pizza Kitchen](https://pizza-kitchen.netlify.app/)
 
 ## My process
 
@@ -104,5 +104,10 @@ There are a few things I'd like to learn more about next:
 
 ## Acknowledgments
 
-- I got the arrow icon on Flaticon so I'll leave the attribution [here](https://www.flaticon.com/free-icons/arrow): made by rang - Flaticon
-- All the other pictures (bg image, pizza loader) are homemade
+Special thanks to [Yazdun](https://github.com/Yazdun) for refactoring the file structure and helping me with React best practices.
+
+The home page background image and pizza slice images were made by Luci Maruzs, she can be found on [Instagram](https://www.instagram.com/) (link should be updated soon)
+
+_Obligatory attributions_
+
+The logo and the arrow icon in the finished order page is from [Flaticon (made by rang)](https://www.flaticon.com/free-icons/arrow)
