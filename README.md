@@ -52,7 +52,7 @@ The extra bits I added:
 
 ## My process
 
-The original component was pretty simple. Once it was done I decided to create a simple pizza app out of it (even though I had to change the wording of the actual challenge >.<). I was having a lot of fun with this so I kept adding new stuff. The design isn't the fanciest as I'm not a professional, nor was that the point here. I wanted to practice a couple of things instead: React, Firebase and animations.
+The original component was pretty simple. Once it was done I decided to create a simple pizza app out of it (even though I had to change the wording of the actual challenge). I was having a lot of fun with this so I kept adding new stuff. The design isn't the fanciest as I'm not a professional, nor was that the point here. I wanted to practice a couple of things instead: React, Firebase and animations.
 
 I don't want to pretend I reinvented the wheel here, I used a bunch of resources (most of the articles, videos and other stuff are listed below) to complete this, as most of the these things were pretty new / completely new to me but I learned heaps.
 
@@ -70,8 +70,8 @@ I don't want to pretend I reinvented the wheel here, I used a bunch of resources
 
 ### What I learned
 
-- Framer Motion: I'm still not comfortable with this but I feel like I'm getting somewhat better. I learned how to animate routes which honestly makes so much difference ( I opted for a really subtle fade in).
-- React context: Only used it for the authentication, and purely for the sake of trying it out. Probably could've gotten away without it. As cool as it is, it's something I'm probably going to use pretty sparingly in the future. It's on overkill for most purposes and it affects component reusability badly I reckon (I may be wrong and I may review this thought later but for now this is the way it seems to me).
+- _Framer Motion_: I'm still not comfortable with this but I feel like I'm getting somewhat better. I learned how to animate routes which honestly makes so much difference ( I opted for a really subtle fade in).
+- _React context_: Originally only used it for the authentication, as it was my first time working with context but during the refactoring a ThemeContext and a PizzaContext were also created. I found it makes more sense this way: to avoid [prop drilling](https://kentcdodds.com/blog/prop-drilling) (for example: PizzaContext) or to extract bits and make the code easier to read (ThemeContext). Sometimes context might affect reusability in a bad way, but other times - like in the case of ThemeContext - it can actually improve it.
 - useState, useRef
 - input handling
 - routing
@@ -84,6 +84,8 @@ There are a few things I'd like to learn more about next:
 - How to better handle images so they don't affect performance as much
 - React custom hooks
 - Firebase storage: would be nice to use in a small sideproject
+
+I've also been struggling with formatting my commit messages. Out of all projects, probably this one is the messiest because I was trying to improve on the go (also had [Yazdun](<(https://github.com/Yazdun)>) making commits that followed an enitrely different commit convention - probably the one I should've followed too). From one-liners I moved on to having separate title and description for commit messages (when needed). Now that I learned about [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/) I try to add commit types as well.
 
 ### Useful resources
 
