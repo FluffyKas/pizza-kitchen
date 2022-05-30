@@ -43,7 +43,8 @@ The extra bits I added:
 
 ### Screenshot
 
-![](./screenshot.jpg)
+![](./screenshots/finish-desktop.png)
+![](./screenshots/signup-mobile.png)
 
 ### Links
 
@@ -80,14 +81,13 @@ I don't want to pretend I reinvented the wheel here, I used a bunch of resources
 
 There are a few things I'd like to learn more about next:
 
-- Framer Motion: need to learn how to do exit animations
 - How to better handle images so they don't affect performance as much
 - React custom hooks
 - Firebase storage: would be nice to use in a small sideproject
 
 ### Useful resources
 
-- [Firebase Course](https://www.youtube.com/watch?v=9zdvmgGsww0) - great Firebase course from Net Ninja
+- [Net Ninja's Firebase Course](https://www.youtube.com/watch?v=9zdvmgGsww0)
 - [Setting up Firebase auth](https://www.youtube.com/watch?v=PKwu15ldZ7k) - it's a bit dated but a good starting point that works fine with some modifications
 - [Input animation](https://www.youtube.com/watch?v=v8mRUU3orjI) - A video on how to animate the input label with CSS only
 - [useLocalStorage React hook](https://www.npmjs.com/package/use-local-storage) - A hook that simplifies using LocalStorage
@@ -100,6 +100,7 @@ There are a few things I'd like to learn more about next:
 ## Author
 
 - Frontend Mentor - [@FluffyKas](https://www.frontendmentor.io/profile/FluffyKas)
+- Twitter - [@fluffykas](https://www.twitter.com/FluffyKas)
 
 ## Acknowledgments
 
