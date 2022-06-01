@@ -48,11 +48,11 @@ The extra bits I added:
 
 ### Links
 
--Live site: [Pizza Kitchen](https://pizza-kitchen.netlify.app/)
+- Live site: [Pizza Kitchen](https://pizza-kitchen.netlify.app/)
 
 ## My process
 
-The original component was pretty simple. Once it was done I decided to create a simple pizza app out of it (even though I had to change the wording of the actual challenge). I was having a lot of fun with this so I kept adding new stuff. The design isn't the fanciest as I'm not a professional, nor was that the point here. I wanted to practice a couple of things instead: React, Firebase and animations.
+The original component was pretty simple. Once it was done I decided to create a simple pizza app out of it (even though I had to change the wording of the actual challenge). I was having a lot of fun with this so I kept adding more and more to it and by the end, the original component became a small modal only.
 
 I don't want to pretend I reinvented the wheel here, I used a bunch of resources (most of the articles, videos and other stuff are listed below) to complete this, as most of the these things were pretty new / completely new to me but I learned heaps.
 
@@ -70,11 +70,11 @@ I don't want to pretend I reinvented the wheel here, I used a bunch of resources
 
 ### What I learned
 
-- _Framer Motion_: I'm still not comfortable with this but I feel like I'm getting somewhat better. I learned how to animate routes which honestly makes so much difference ( I opted for a really subtle fade in).
+- _Framer Motion_: I'm still not comfortable with this but I feel like I'm getting somewhat better. I learned how to animate routes which honestly makes so much difference.
 
 - _React context_: Originally only used it for the authentication, as it was my first time working with context but during the refactoring a ThemeContext and a PizzaContext were also created. I found it makes more sense this way: to avoid [prop drilling](https://kentcdodds.com/blog/prop-drilling) (for example: PizzaContext) or to extract bits and make the code easier to read (ThemeContext). Sometimes context might affect reusability in a bad way, but other times - like in the case of ThemeContext - it can actually improve it.
 
-- _Form handling in React_: Below I listed some articles on the topic of controlled and uncontrolled form inputs. It's a pretty interesting topic, one that everyone seems to be quite opinionated about. From what I understood, in most cases using controlled elements (saving input values in state so data and UI are always in sync) is preferred as they give you more control over what's happening (there was a good example of this in one of the articles: disabling a button until all fields have valid data). Uncontrolled elements seem very much the same as form handling with vanilla Javascript: you let the DOM handle things, the value is saved in a ref which you can pull when the form is submitted. This won't keep the UI in synch with your data (=> no rerenders, which I assume can be an advantage sometimes). Both seem to have some valid use cases and both would've worked just fine for this simple project. I went with state instead of ref purely because I'll just more likely to use this approach in the future.
+- _Form handling in React_: Below I listed some articles on the topic of controlled and uncontrolled form inputs. It's a pretty interesting topic, one that everyone seems to be quite opinionated about. From what I understood, in most cases using controlled elements (saving input values in state so data and UI are always in sync) is preferred as they give you more control over what's happening (there was a good example of this in one of the articles: disabling a button until all fields have valid data). Uncontrolled elements seem very much the same as form handling with vanilla Javascript: you let the DOM handle things, the value is saved in a ref which you can pull when the form is submitted. This won't keep the UI in synch with your data (=> no rerenders, which I assume can be an advantage sometimes). Both seem to have some valid use cases and both would've worked just fine for this simple project. I went with state instead of ref purely because this seems to be the more often used solution.
 
 - _Routing_: Truth be told, this got completely reworked when the code was refactored. I feel like the final product is very neat and scalable: all paths are defined in AppRoutes.js then a map is used to create the actual routes out of them. If I wanted to add anything in the future, this would make it very simple. I started using this approach in my other projects too.
 
@@ -84,13 +84,9 @@ I don't want to pretend I reinvented the wheel here, I used a bunch of resources
 
 ### Continued development
 
-There are a few things I'd like to learn more about next:
+I've been struggling with formatting my commit messages. Out of all projects, probably this one is the messiest because I was trying to improve on the go (also had [Yazdun](https://github.com/Yazdun) making commits that followed an enitrely different commit convention - probably the one I should've followed too). From one-liners I moved on to having separate title and description for commit messages (when needed). Now that I learned about [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/) I try to add commit types as well.
 
-- How to better handle images so they don't affect performance as much
-- React custom hooks
-- Firebase storage: would be nice to use in a small sideproject
-
-I've also been struggling with formatting my commit messages. Out of all projects, probably this one is the messiest because I was trying to improve on the go (also had [Yazdun](https://github.com/Yazdun) making commits that followed an enitrely different commit convention - probably the one I should've followed too). From one-liners I moved on to having separate title and description for commit messages (when needed). Now that I learned about [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/) I try to add commit types as well.
+Framer Motion is also something I need to invest more time into.
 
 ### Useful resources
 
