@@ -41,14 +41,14 @@ The extra bits I added:
 - light/dark theme
 - turned rating card into a modal
 
+### Links
+
+- Live site: [Pizza Kitchen](https://pizza-kitchen.netlify.app/)
+
 ### Screenshot
 
 ![](./screenshots/finish-desktop.png)
 ![](./screenshots/signup-mobile.png)
-
-### Links
-
-- Live site: [Pizza Kitchen](https://pizza-kitchen.netlify.app/)
 
 ## My process
 
