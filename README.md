@@ -8,8 +8,8 @@ I actually expanded upon it a bit. You could say this is a completely different 
 
 - [Overview](#overview)
   - [The challenge](#the-challenge)
-  - [Screenshot](#screenshot)
   - [Links](#links)
+  - [Screenshots](#screenshots)
 - [My process](#my-process)
   - [Built with](#built-with)
   - [What I learned](#what-i-learned)
@@ -45,7 +45,7 @@ The extra bits I added:
 
 - Live site: [Pizza Kitchen](https://pizza-kitchen.netlify.app/)
 
-### Screenshot
+### Screenshots
 
 ![](./screenshots/finish-desktop.png)
 ![](./screenshots/signup-mobile.png)
